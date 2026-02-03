@@ -8,7 +8,7 @@ export default function Home() {
       {/* ──────────────────────────────────────────────────────────────────────────
           HERO: INDUSTRIAL / PLAIN ENGLISH
           ────────────────────────────────────────────────────────────────────────── */}
-      <section className="relative pt-32 pb-20 border-b border-[#D6D2CA]">
+      <section className="relative pt-24 pb-20 border-b border-[#D6D2CA]">
         {/* Background Grid/Lines */}
         <div className="absolute inset-0 z-0 pointer-events-none opacity-[0.02]"
           style={{ backgroundImage: 'linear-gradient(to right, #171412 1px, transparent 1px), linear-gradient(to bottom, #171412 1px, transparent 1px)', backgroundSize: '4rem 4rem' }}>
@@ -75,7 +75,7 @@ export default function Home() {
             </div>
 
             {/* Right Column: Key Metrics (The "Spec Strip") */}
-            <div className="lg:col-span-4 border-l border-[#D6D2CA] pl-0 lg:pl-10 flex flex-col justify-center gap-8">
+            <div className="lg:col-span-4 border-l border-[#D6D2CA] pl-4 lg:pl-10 flex flex-col justify-center gap-8">
 
               <div className="relative">
                 <div className="text-[#B58A2A] text-xs font-mono mb-1">01 // PERFORMANCE</div>
