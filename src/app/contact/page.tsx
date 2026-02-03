@@ -15,10 +15,10 @@ export default function Contact() {
 
       <div className="relative max-w-xl mx-auto z-10">
         <div className="text-center mb-16">
-          <span className="text-[#B58A2A] font-mono text-xs uppercase mb-2 block">Incoming Transmission</span>
-          <h2 className="text-4xl font-bold uppercase tracking-tight text-[#171412] mb-6">Establish Uplink</h2>
+          <span className="text-[#B58A2A] font-mono text-xs uppercase mb-2 block">New Project</span>
+          <h2 className="text-4xl font-bold uppercase tracking-tight text-[#171412] mb-6">Start a Build</h2>
           <p className="text-[#555] font-light">
-            Project specs, RFPs, or general inquiries. Decrypted and reviewed by human operators.
+            Tell us about your project requirements. We usually respond to inquiries within 24 hours.
           </p>
         </div>
         
@@ -57,7 +57,7 @@ export default function Contact() {
 
             <div className="pt-4">
               <button type="submit" className="w-full inline-flex items-center justify-center px-8 py-4 bg-[#171412] text-[#F4F2EE] text-xs font-bold uppercase tracking-widest hover:bg-[#B58A2A] transition-colors">
-                Transmit Data
+                Send Request
               </button>
             </div>
           </form>
