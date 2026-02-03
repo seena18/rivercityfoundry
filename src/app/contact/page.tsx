@@ -30,7 +30,7 @@ export default function Contact() {
 
           <form action="https://api.web3forms.com/submit" method="POST" className="grid grid-cols-1 gap-y-8">
             {/* REPLACE WITH YOUR ACCESS KEY FROM WEB3FORMS */}
-            <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE" />
+            <input type="hidden" name="access_key" value="a616a4b8-cc40-45a5-807e-2d734fd77a47" />
             <input type="hidden" name="subject" value="New Submission from River City Foundry" />
             <input type="hidden" name="from_name" value="River City Website" />
             <input type="checkbox" name="botcheck" className="hidden" style={{ display: 'none' }} />
