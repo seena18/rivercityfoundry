@@ -30,7 +30,7 @@ export default function Home() {
                 River City Foundry
               </span>
               <h1 className="text-4xl md:text-6xl font-bold uppercase tracking-tight leading-none text-[#171412] max-w-3xl">
-                High-Performance<br />Websites for <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#171412] to-[#666]">Sacramento Businesses</span>
+                Websites & Software<br />for <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#171412] to-[#666]">Sacramento Businesses</span>
               </h1>
             </div>
             <div className="text-right hidden md:block">
@@ -45,9 +45,9 @@ export default function Home() {
             {/* Left Column: Mission Statement */}
             <div className="lg:col-span-8">
               <p className="text-xl md:text-2xl font-normal text-[#171412] leading-relaxed max-w-3xl mb-8">
-                We design and build high-performance websites for local businesses—fast, durable, and designed to convert.
+                We build high-performance websites and custom software for local businesses—fast, durable, and designed to convert.
                 <span className="text-[#B58A2A] font-medium"> No fluff. Just iron-clad code.</span>
-                <span className="block text-sm font-bold text-[#171412] mt-4 max-w-lg">Simple process. Clear pricing. You run the business — we handle the web.</span>
+                <span className="block text-sm font-bold text-[#171412] mt-4 max-w-lg">Simple process. Clear pricing. You run the business — we build the tools.</span>
               </p>
 
               {/* Trust Indicators / Stamped Labels */}

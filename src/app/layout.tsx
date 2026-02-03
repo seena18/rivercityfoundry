@@ -3,12 +3,33 @@ import { Inter } from 'next/font/google';
 import './globals.css';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import JsonLd from '@/components/JsonLd';
 
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'River City Foundry | High-Performance Websites',
-  description: 'Premium Web Design Agency in San Antonio',
+  metadataBase: new URL('https://rivercityfoundry.net'),
+  title: {
+    default: 'River City Foundry | Web Design & Software Development Sacramento',
+    template: '%s | River City Foundry'
+  },
+  description: 'Premium Web Design & Software Agency in Sacramento. We build high-performance websites, custom apps, and digital tools for businesses.',
+  alternates: {
+    canonical: '/',
+  },
+  openGraph: {
+    title: 'River City Foundry | Web Design & Software Development',
+    description: 'Premium Web Design & Software Agency in Sacramento. We build high-performance websites, custom apps, and digital tools for businesses.',
+    url: 'https://rivercityfoundry.net',
+    siteName: 'River City Foundry',
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'River City Foundry',
+    description: 'High-Performance Web Design in Sacramento',
+  },
 };
 
 export default function RootLayout({
@@ -19,6 +40,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className} min-h-screen flex flex-col`}>
+        <JsonLd />
         <Navbar />
         <main className="flex-grow">
           {children}

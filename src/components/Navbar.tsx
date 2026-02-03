@@ -23,7 +23,7 @@ export default function Navbar() {
             </Link>
             
             <Link href="/" className="text-lg font-bold tracking-tight text-[#171412] uppercase leading-none">
-                River City Foundry<br/><span className="text-[10px] tracking-[0.2em] text-[#B58A2A] font-normal">Web Studio</span>
+                River City Foundry<br/><span className="text-[10px] tracking-[0.2em] text-[#B58A2A] font-normal">Digital Studio</span>
             </Link>
           </div>
 
@@ -31,6 +31,7 @@ export default function Navbar() {
           <nav className="hidden md:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 items-center gap-8">
               {[
                 { name: 'Home', href: '/' },
+                { name: 'Services', href: '/services' },
                 { name: 'Project Gallery', href: '/#work' },
                 { name: 'Contact', href: '/contact' }
               ].map((item) => (
@@ -76,6 +77,7 @@ export default function Navbar() {
           <div className="px-6 pt-2 pb-6 space-y-4 flex flex-col items-start">
             {[
                 { name: 'Home', href: '/' },
+                { name: 'Services', href: '/services' },
                 { name: 'Project Gallery', href: '/#work' },
                 { name: 'Contact', href: '/contact' }
             ].map((item) => (

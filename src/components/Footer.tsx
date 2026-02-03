@@ -18,17 +18,16 @@ export default function Footer() {
                      </div>
                      <div>
                         <h3 className="text-xl font-bold uppercase tracking-wider leading-none text-[#F4F2EE]">River City Foundry</h3>
-                        <div className="text-[#B58A2A] text-[10px] tracking-[0.3em] font-normal uppercase mt-1">Web Studio</div>
+                        <div className="text-[#B58A2A] text-[10px] tracking-[0.3em] font-normal uppercase mt-1">Digital Studio</div>
                      </div>
                  </div>
                  <p className="text-[#9CA3AF] max-w-xs leading-relaxed font-sans">
-                    Precision web design & development for businesses that demand performance.
+                    Precision web design & software development for businesses that demand performance.
                  </p>
             </div>
 
             <div className="flex flex-col md:items-end gap-2 text-[#9CA3AF]">
                <div>LED BY: Seena Abed (Founder)</div>
-               <div>CONTACT: <a href="mailto:hello@rivercity.web" className="hover:text-[#B58A2A] transition-colors">hello@rivercity.web</a></div>
                <div>PHONE: <a href="tel:9165420331" className="hover:text-[#B58A2A] transition-colors">916.542.0331</a></div>
                <div>LOC: Sacramento, CA</div>
             </div>
