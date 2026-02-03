@@ -28,7 +28,13 @@ export default function Contact() {
           <div className="absolute bottom-0 left-0 w-4 h-4 border-b-2 border-l-2 border-[#B58A2A]"></div>
           <div className="absolute bottom-0 right-0 w-4 h-4 border-b-2 border-r-2 border-[#B58A2A]"></div>
 
-          <form action="#" method="POST" className="grid grid-cols-1 gap-y-8">
+          <form action="https://api.web3forms.com/submit" method="POST" className="grid grid-cols-1 gap-y-8">
+            {/* REPLACE WITH YOUR ACCESS KEY FROM WEB3FORMS */}
+            <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE" />
+            <input type="hidden" name="subject" value="New Submission from River City Foundry" />
+            <input type="hidden" name="from_name" value="River City Website" />
+            <input type="checkbox" name="botcheck" className="hidden" style={{ display: 'none' }} />
+
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                 <div>
                 <label htmlFor="first-name" className="block text-[10px] font-bold text-[#171412] uppercase tracking-widest mb-2 font-mono">First name</label>
