@@ -19,6 +19,12 @@ export default function Contact() {
           <p className="text-sm text-[#555] font-light">
              Tell us about your project requirements. We usually respond within 24 hours.
           </p>
+          <div className="mt-6 flex flex-col items-center gap-2">
+             <span className="text-[10px] font-mono text-[#B58A2A] uppercase tracking-widest">Immediate Inquiry? Start a Call</span>
+             <a href="tel:9165420331" className="text-2xl font-bold text-[#171412] hover:text-[#B58A2A] transition-colors border-b-2 border-[#B58A2A] pb-1">
+                916.542.0331
+             </a>
+          </div>
         </div>
         
         <div className="bg-white p-8 md:p-12 border border-[#D6D2CA] shadow-xl shadow-[#D6D2CA]/20 relative">

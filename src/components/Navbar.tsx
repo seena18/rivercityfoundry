@@ -79,6 +79,10 @@ export default function Navbar() {
             >
               Start Project
             </Link>
+            <div className="w-full pt-4 border-t border-[#D6D2CA]/30 mt-2">
+                <div className="text-[10px] text-[#B58A2A] font-mono mb-1 uppercase tracking-widest">Call Direct</div>
+                <a href="tel:9165420331" className="text-xl font-bold text-[#171412]">916.542.0331</a>
+            </div>
           </div>
         </div>
       )}
