@@ -4,7 +4,7 @@ import { InlineWidget } from "react-calendly";
 
 export default function Consultation() {
   return (
-    <div className="bg-[#F4F2EE] min-h-screen py-24 px-6 font-sans text-[#171412] relative overflow-hidden">
+    <div className="bg-[#F4F2EE] min-h-screen pt-12 pb-24 px-6 font-sans text-[#171412] relative overflow-hidden">
       {/* Background Grid/Lines */}
       <div className="absolute inset-0 z-0 pointer-events-none opacity-[0.02]" 
            style={{ backgroundImage: 'linear-gradient(to right, #171412 1px, transparent 1px), linear-gradient(to bottom, #171412 1px, transparent 1px)', backgroundSize: '4rem 4rem' }}>
@@ -19,14 +19,10 @@ export default function Consultation() {
 
       <div className="relative max-w-5xl mx-auto text-center z-10">
         
-        <div className="inline-block border border-[#B58A2A] px-3 py-1 mb-6">
-           <span className="text-[#B58A2A] text-xs font-mono tracking-widest uppercase">Scheduling</span>
-        </div>
-
-        <h2 className="text-4xl font-bold uppercase tracking-tight text-[#171412] mb-6">Book a Session</h2>
+        <h2 className="text-3xl font-bold uppercase tracking-tight text-[#171412] mb-4">Book a Session</h2>
         
-        <p className="text-lg text-[#555] max-w-2xl mx-auto mb-12 font-light">
-          Let's discuss your build requirements. No sales scripts—just a feasibility check to see if we're the right fit.
+        <p className="text-sm text-[#555] max-w-xl mx-auto mb-8 font-light">
+          Let's discuss your build requirements. No sales scripts—just a feasibility check.
         </p>
         
         <div className="bg-white border text-center border-[#D6D2CA] shadow-[4px_4px_0px_#D6D2CA] overflow-hidden min-h-[1050px]">

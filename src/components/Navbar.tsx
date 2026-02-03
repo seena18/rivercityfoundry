@@ -23,7 +23,7 @@ export default function Navbar() {
           </div>
 
           <div className="hidden md:flex sm:items-center sm:gap-10">
-            {['Home', 'Services', 'Contact'].map((item) => (
+            {['Home', 'Contact'].map((item) => (
                 <Link key={item} href={item === 'Home' ? '/' : `/${item.toLowerCase()}`} className="text-[#171412] text-xs font-bold uppercase tracking-widest hover:text-[#B58A2A] transition-colors relative group">
                     {item}
                     <span className="absolute -bottom-2 left-0 w-0 h-[1px] bg-[#B58A2A] transition-all group-hover:w-full"></span>

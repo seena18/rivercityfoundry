@@ -1,6 +1,6 @@
 export default function Contact() {
   return (
-    <div className="bg-[#F4F2EE] min-h-screen py-24 px-6 font-sans text-[#171412] relative overflow-hidden">
+    <div className="bg-[#F4F2EE] min-h-screen pt-12 pb-24 px-6 font-sans text-[#171412] relative overflow-hidden">
       {/* Background Grid/Lines */}
       <div className="absolute inset-0 z-0 pointer-events-none opacity-[0.02]" 
            style={{ backgroundImage: 'linear-gradient(to right, #171412 1px, transparent 1px), linear-gradient(to bottom, #171412 1px, transparent 1px)', backgroundSize: '4rem 4rem' }}>
@@ -14,11 +14,10 @@ export default function Contact() {
       </div>
 
       <div className="relative max-w-xl mx-auto z-10">
-        <div className="text-center mb-16">
-          <span className="text-[#B58A2A] font-mono text-xs uppercase mb-2 block">New Project</span>
-          <h2 className="text-4xl font-bold uppercase tracking-tight text-[#171412] mb-6">Start a Build</h2>
-          <p className="text-[#555] font-light">
-            Tell us about your project requirements. We usually respond to inquiries within 24 hours.
+        <div className="text-center mb-8">
+          <h2 className="text-3xl font-bold uppercase tracking-tight text-[#171412] mb-4">Start a Build</h2>
+          <p className="text-sm text-[#555] font-light">
+             Tell us about your project requirements. We usually respond within 24 hours.
           </p>
         </div>
         

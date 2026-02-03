@@ -207,7 +207,7 @@ export default function Home() {
                             </div>
                          </div>
 
-                         <Link href="/" className="inline-flex items-center text-xs font-bold uppercase tracking-widest text-[#171412] border-b-2 border-[#B58A2A] pb-1 hover:text-[#B58A2A] transition-colors">
+                         <Link href="https://davestrades-web.vercel.app/" target="_blank" className="inline-flex items-center text-xs font-bold uppercase tracking-widest text-[#171412] border-b-2 border-[#B58A2A] pb-1 hover:text-[#B58A2A] transition-colors">
                              View Deployment
                              <span className="ml-2">→</span>
                          </Link>
@@ -230,6 +230,63 @@ export default function Home() {
                                 <span className="bg-[#171412] text-white px-2 py-1 text-[10px] font-bold uppercase tracking-widest shadow-lg">Live System</span>
                              </div>
                          </div>
+                    </div>
+                </div>
+            </div>
+
+            {/* Portfolio Reel Featured Build */}
+            <div className="mb-20">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    {/* Video Side */}
+                    <div className="relative group perspective-1000">
+                         <div className="absolute -inset-4 bg-[#B58A2A]/5 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                         <div className="relative border border-[#D6D2CA] bg-[#F4F2EE] shadow-xl shadow-[#B58A2A]/5 overflow-hidden">
+                             <div className="aspect-[16/10] relative">
+                                <video
+                                    src="/portfolio.mov"
+                                    autoPlay
+                                    muted
+                                    loop
+                                    playsInline
+                                    className="w-full h-full object-cover hover:scale-[1.02] transition-transform duration-700"
+                                />
+                             </div>
+                             {/* Overlay UI elements */}
+                             <div className="absolute top-4 left-4 flex gap-2">
+                                <span className="bg-[#171412] text-white px-2 py-1 text-[10px] font-bold uppercase tracking-widest shadow-lg">Agency Reel</span>
+                             </div>
+                         </div>
+                    </div>
+
+                    {/* Text Side */}
+                    <div className="lg:pl-8">
+                         <div className="text-[#B58A2A] font-mono text-xs mb-4">FABRICATION_LOG // 003</div>
+                         <h3 className="text-3xl md:text-4xl font-bold uppercase text-[#171412] mb-4 leading-none">
+                             Foundry Reel <span className="block text-xl md:text-2xl text-[#666] mt-2">Visual System Architecture</span>
+                         </h3>
+                         <p className="text-lg text-[#555] font-light mb-8 leading-relaxed">
+                            A high-fidelity motion study demonstrating our core design principles: industrial precision, raw performance, and zero fluff.
+                         </p>
+                         
+                         <div className="bg-[#F9F8F6] border border-[#E5E5E5] p-6 mb-8">
+                            <span className="text-[10px] font-bold text-[#B58A2A] uppercase tracking-widest mb-4 block">SYSTEM SPECS</span>
+                            <ul className="space-y-3">
+                                <li className="flex items-start text-sm text-[#555] font-mono">
+                                    <span className="text-[#B58A2A] mr-3">●</span> Advanced Motion Graphics
+                                </li>
+                                <li className="flex items-start text-sm text-[#555] font-mono">
+                                    <span className="text-[#B58A2A] mr-3">●</span> Kinetic Typography
+                                </li>
+                                <li className="flex items-start text-sm text-[#555] font-mono">
+                                    <span className="text-[#B58A2A] mr-3">●</span> Brand Identity Systems
+                                </li>
+                            </ul>
+                         </div>
+                         
+                         <Link href="https://seenaabed.com" target="_blank" className="inline-flex items-center text-xs font-bold uppercase tracking-widest text-[#171412] border-b-2 border-[#B58A2A] pb-1 hover:text-[#B58A2A] transition-colors">
+                             View Deployment
+                             <span className="ml-2">→</span>
+                         </Link>
                     </div>
                 </div>
             </div>
@@ -367,7 +424,7 @@ export default function Home() {
               </p>
               <div className="flex flex-col items-center gap-4">
                   <Link href="/consultation" className="inline-block px-12 py-5 bg-[#B58A2A] text-white font-bold uppercase tracking-widest hover:bg-[#967d38] transition-colors shadow-lg shadow-[#B58A2A]/20">
-                      Book a 15-minute consult
+                      Book a 30-minute consult
                   </Link>
                   <p className="text-xs text-[#5c4033] font-mono">Projects typically start at $2.5k. Reply within 24 hours.</p>
               </div>
