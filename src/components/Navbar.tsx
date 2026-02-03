@@ -27,16 +27,23 @@ export default function Navbar() {
             </Link>
           </div>
 
-          <div className="hidden md:flex sm:items-center sm:gap-10">
+          <div className="hidden md:flex sm:items-center sm:gap-8">
             {['Home', 'Contact'].map((item) => (
                 <Link key={item} href={item === 'Home' ? '/' : `/${item.toLowerCase()}`} className="text-[#171412] text-xs font-bold uppercase tracking-widest hover:text-[#B58A2A] transition-colors relative group">
                     {item}
                     <span className="absolute -bottom-2 left-0 w-0 h-[1px] bg-[#B58A2A] transition-all group-hover:w-full"></span>
                 </Link>
             ))}
+
+            <div className="hidden lg:flex items-center gap-2 border-r border-[#D6D2CA] pr-8 mr-2 h-full">
+                <span className="text-[10px] text-[#B58A2A] font-mono uppercase tracking-widest hidden xl:inline">Talk to a human</span>
+                <a href="tel:9165420331" className="text-sm font-bold text-[#171412] hover:text-[#B58A2A] transition-colors">
+                    916.542.0331
+                </a>
+            </div>
             
-            <Link href="/consultation" className="px-6 py-3 bg-[#171412] text-[#F4F2EE] text-xs font-bold uppercase tracking-widest hover:bg-[#B58A2A] transition-colors">
-              Start Project
+            <Link href="/consultation" className="px-6 py-3 bg-[#171412] text-[#F4F2EE] text-xs font-bold uppercase tracking-widest hover:bg-[#B58A2A] transition-colors shadow-lg shadow-[#B58A2A]/20">
+              Book 15-min Consult
             </Link>
           </div>
 
