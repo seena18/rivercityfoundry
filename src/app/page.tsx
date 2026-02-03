@@ -167,11 +167,6 @@ export default function Home() {
                                 </li>
                             </ul>
                          </div>
-
-                         <Link href="/" className="inline-flex items-center text-xs font-bold uppercase tracking-widest text-[#171412] border-b-2 border-[#B58A2A] pb-1 hover:text-[#B58A2A] transition-colors">
-                             View Deployment
-                             <span className="ml-2">→</span>
-                         </Link>
                     </div>
                 </div>
             </div>
