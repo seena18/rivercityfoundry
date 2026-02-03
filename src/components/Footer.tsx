@@ -29,7 +29,7 @@ export default function Footer() {
             <div className="flex flex-col md:items-end gap-2 text-[#9CA3AF]">
                <div>LED BY: Seena Abed (Founder)</div>
                <div>CONTACT: <a href="mailto:hello@rivercity.web" className="hover:text-[#B58A2A] transition-colors">hello@rivercity.web</a></div>
-               <div>PHONE: <a href="tel:9165420331" className="hover:text-[#B58A2A] transition-colors">916.542.0331</a></div>
+               <div>PHONE: <a href="tel:9165420331" className="text-[#B58A2A] font-bold hover:text-white transition-colors">916.542.0331</a></div>
                <div>LOC: Sacramento, CA</div>
             </div>
         </div>
