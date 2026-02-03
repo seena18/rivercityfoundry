@@ -10,7 +10,7 @@ export default function Navbar() {
   return (
     <nav className="fixed w-full top-0 bg-[#F4F2EE]/90 backdrop-blur-md border-b border-[#D6D2CA] relative z-50 font-sans">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="flex justify-between h-24 items-center">
+        <div className="relative flex justify-between h-24 items-center">
           
           <div className="flex items-center gap-4">
             <Link href="/" className="relative w-20 h-20">
@@ -27,24 +27,29 @@ export default function Navbar() {
             </Link>
           </div>
 
-          <div className="hidden md:flex sm:items-center sm:gap-8">
-            {['Home', 'Contact'].map((item) => (
-                <Link key={item} href={item === 'Home' ? '/' : `/${item.toLowerCase()}`} className="text-[#171412] text-xs font-bold uppercase tracking-widest hover:text-[#B58A2A] transition-colors relative group">
-                    {item}
-                    <span className="absolute -bottom-2 left-0 w-0 h-[1px] bg-[#B58A2A] transition-all group-hover:w-full"></span>
-                </Link>
-            ))}
+          {/* Centered Desktop Nav */}
+          <nav className="hidden md:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 items-center gap-8">
+              {[
+                { name: 'Home', href: '/' },
+                { name: 'Project Gallery', href: '/#work' },
+                { name: 'Contact', href: '/contact' }
+              ].map((item) => (
+                  <Link key={item.name} href={item.href} className="text-[#171412] text-xs font-bold uppercase tracking-widest hover:text-[#B58A2A] transition-colors relative group">
+                      {item.name}
+                      <span className="absolute -bottom-2 left-0 w-0 h-[1px] bg-[#B58A2A] transition-all group-hover:w-full"></span>
+                  </Link>
+              ))}
+          </nav>
 
-            <div className="hidden lg:flex items-center gap-2 border-r border-[#D6D2CA] pr-8 mr-2 h-full">
-                <span className="text-[10px] text-[#B58A2A] font-mono uppercase tracking-widest hidden xl:inline">Talk to a human</span>
-                <a href="tel:9165420331" className="text-sm font-bold text-[#171412] hover:text-[#B58A2A] transition-colors">
-                    916.542.0331
+          {/* Right Actions */}
+          <div className="hidden md:flex items-center gap-6">
+                <a href="tel:9165420331" className="text-xs font-bold text-[#171412] hover:text-[#B58A2A] transition-colors hidden lg:block uppercase tracking-widest">
+                    Call 916.542.0331
                 </a>
-            </div>
-            
-            <Link href="/consultation" className="px-6 py-3 bg-[#171412] text-[#F4F2EE] text-xs font-bold uppercase tracking-widest hover:bg-[#B58A2A] transition-colors shadow-lg shadow-[#B58A2A]/20">
-              Book 15-min Consult
-            </Link>
+                
+                <Link href="/consultation" className="px-6 py-3 bg-[#171412] text-[#F4F2EE] text-xs font-bold uppercase tracking-widest hover:bg-[#B58A2A] transition-colors shadow-lg shadow-[#B58A2A]/20">
+                  Book 15-min Consult
+                </Link>
           </div>
 
           {/* Mobile Hamburger Button */}
@@ -69,14 +74,18 @@ export default function Navbar() {
       {isMenuOpen && (
         <div className="md:hidden bg-[#F4F2EE] border-b border-[#D6D2CA]">
           <div className="px-6 pt-2 pb-6 space-y-4 flex flex-col items-start">
-            {['Home', 'Contact'].map((item) => (
+            {[
+                { name: 'Home', href: '/' },
+                { name: 'Project Gallery', href: '/#work' },
+                { name: 'Contact', href: '/contact' }
+            ].map((item) => (
                 <Link 
-                  key={item} 
-                  href={item === 'Home' ? '/' : `/${item.toLowerCase()}`} 
+                  key={item.name} 
+                  href={item.href} 
                   className="block text-[#171412] text-sm font-bold uppercase tracking-widest hover:text-[#B58A2A] transition-colors w-full border-b border-[#D6D2CA]/50 pb-2"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                    {item}
+                    {item.name}
                 </Link>
             ))}
             <Link 

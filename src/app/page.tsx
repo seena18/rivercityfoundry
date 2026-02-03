@@ -68,9 +68,6 @@ export default function Home() {
                   <span className="mr-2">Start a Project</span>
                   <span className="group-hover:translate-x-1 transition-transform">→</span>
                 </Link>
-                <Link href="/#work" className="inline-flex items-center justify-center px-8 py-4 border border-[#171412] text-[#171412] uppercase tracking-widest text-xs font-bold hover:bg-[#D6D2CA] transition-colors hover:border-[#D6D2CA]">
-                  View Work
-                </Link>
               </div>
             </div>
 
@@ -113,11 +110,11 @@ export default function Home() {
           <div className="flex items-end justify-between mb-16 border-b border-[#171412] pb-6">
             <div>
               <span className="text-[#B58A2A] font-mono text-xs mb-2 block">FABRICATION LOGS</span>
-              <h2 className="text-3xl font-bold uppercase text-[#171412]">Selected Work</h2>
+              <h2 className="text-3xl font-bold uppercase text-[#171412]">Project Gallery</h2>
               <p className="text-xs text-[#555] font-mono mt-2">Real builds and concepts demonstrating our systems.</p>
             </div>
             <Link href="/contact" className="hidden sm:block text-xs font-bold uppercase tracking-widest hover:text-[#B58A2A] transition-colors underline decoration-[#B58A2A] decoration-2 underline-offset-4">
-              Project Gallery
+              Full Archive
             </Link>
           </div>
 
@@ -422,7 +419,7 @@ export default function Home() {
           </p>
           <div className="flex flex-col items-center gap-4">
             <Link href="/consultation" className="inline-block px-12 py-5 bg-[#B58A2A] text-white font-bold uppercase tracking-widest hover:bg-[#967d38] transition-colors shadow-lg shadow-[#B58A2A]/20">
-              Book a 30-minute consult
+              Book a 15-minute consult
             </Link>
             <p className="text-xs text-[#5c4033] font-mono">Projects typically start at $2.5k. Reply within 24 hours.</p>
           </div>
