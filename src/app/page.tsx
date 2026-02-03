@@ -248,7 +248,7 @@ export default function Home() {
                              </div>
                              {/* Overlay UI elements */}
                              <div className="absolute top-4 left-4 flex gap-2">
-                                <span className="bg-[#171412] text-white px-2 py-1 text-[10px] font-bold uppercase tracking-widest shadow-lg">Agency Reel</span>
+                                <span className="bg-[#171412] text-white px-2 py-1 text-[10px] font-bold uppercase tracking-widest shadow-lg">BUILD: R3F_METABALLS</span>
                              </div>
                          </div>
                     </div>
@@ -257,25 +257,28 @@ export default function Home() {
                     <div className="lg:pl-8">
                          <div className="text-[#B58A2A] font-mono text-xs mb-4">FABRICATION_LOG // 003</div>
                          <h3 className="text-3xl md:text-4xl font-bold uppercase text-[#171412] mb-4 leading-none">
-                             Foundry Reel <span className="block text-xl md:text-2xl text-[#666] mt-2">Visual System Architecture</span>
+                             Morphing Lava Lamp <span className="block text-xl md:text-2xl text-[#666] mt-2">Interactive 3D UI System</span>
                          </h3>
                          <p className="text-lg text-[#555] font-light mb-8 leading-relaxed">
-                            A high-fidelity motion study demonstrating our core design principles: industrial precision, raw performance, and zero fluff.
+                            A real-time 3D hero interface with fluid ‘metaball’ motion and responsive theming. Turns standard navigation into a smooth, interactive experience.
                          </p>
                          
                          <div className="bg-[#F9F8F6] border border-[#E5E5E5] p-6 mb-8">
                             <span className="text-[10px] font-bold text-[#B58A2A] uppercase tracking-widest mb-4 block">SYSTEM SPECS</span>
                             <ul className="space-y-3">
                                 <li className="flex items-start text-sm text-[#555] font-mono">
-                                    <span className="text-[#B58A2A] mr-3">●</span> Advanced Motion Graphics
+                                    <span className="text-[#B58A2A] mr-3">●</span> Stack: React, Vite, R3F (Three.js)
                                 </li>
                                 <li className="flex items-start text-sm text-[#555] font-mono">
-                                    <span className="text-[#B58A2A] mr-3">●</span> Kinetic Typography
+                                    <span className="text-[#B58A2A] mr-3">●</span> Rendering: Real-time procedural metaballs
                                 </li>
                                 <li className="flex items-start text-sm text-[#555] font-mono">
-                                    <span className="text-[#B58A2A] mr-3">●</span> Brand Identity Systems
+                                    <span className="text-[#B58A2A] mr-3">●</span> Feature: Custom shader materials + Theming
                                 </li>
                             </ul>
+                            <div className="mt-4 pt-4 border-t border-[#D6D2CA] text-[10px] text-[#999] font-mono uppercase tracking-wide">
+                                Performance-first rendering pipeline. No pre-rendered video.
+                            </div>
                          </div>
                          
                          <Link href="https://seenaabed.com" target="_blank" className="inline-flex items-center text-xs font-bold uppercase tracking-widest text-[#171412] border-b-2 border-[#B58A2A] pb-1 hover:text-[#B58A2A] transition-colors">
