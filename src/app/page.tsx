@@ -171,12 +171,91 @@ export default function Home() {
                 </div>
             </div>
 
-            {/* DaveTrader Featured Build */}
+            {/* Portfolio Reel Featured Build */}
             <div className="mb-20">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center lg:flex-row-reverse">
-                    {/* Text Side - Swapped order for rhythm */}
+                    {/* Text Side */}
                     <div className="lg:pr-8 order-2 lg:order-1">
                          <div className="text-[#B58A2A] font-mono text-xs mb-4">FABRICATION_LOG // 002</div>
+                         <h3 className="text-3xl md:text-4xl font-bold uppercase text-[#171412] mb-4 leading-none">
+                            Morphing Lava Lamp <span className="block text-xl md:text-2xl text-[#666] mt-2">Interactive 3D UI System</span>
+                         </h3>
+                         <p className="text-lg text-[#555] font-light mb-8 leading-relaxed">
+                            A real-time 3D hero interface with fluid ‘metaball’ motion and responsive theming. Turns standard navigation into a smooth, interactive experience.
+                         </p>
+                         
+                         <div className="bg-[#F9F8F6] border border-[#E5E5E5] p-6 mb-8">
+                            <span className="text-[10px] font-bold text-[#B58A2A] uppercase tracking-widest mb-4 block">SYSTEM SPECS</span>
+                            <ul className="space-y-3">
+                                <li className="flex items-start text-sm text-[#555] font-mono">
+                                    <span className="text-[#B58A2A] mr-3">●</span> Stack: React, Vite, R3F (Three.js)
+                                </li>
+                                <li className="flex items-start text-sm text-[#555] font-mono">
+                                    <span className="text-[#B58A2A] mr-3">●</span> Rendering: Real-time procedural metaballs
+                                </li>
+                                <li className="flex items-start text-sm text-[#555] font-mono">
+                                    <span className="text-[#B58A2A] mr-3">●</span> Feature: Custom shader materials + Theming
+                                </li>
+                            </ul>
+                            <div className="mt-4 pt-4 border-t border-[#D6D2CA] text-[10px] text-[#999] font-mono uppercase tracking-wide">
+                                Performance-first rendering pipeline. No pre-rendered video.
+                            </div>
+                         </div>
+                         
+                         <Link href="https://seenaabed.com" target="_blank" className="inline-flex items-center text-xs font-bold uppercase tracking-widest text-[#171412] border-b-2 border-[#B58A2A] pb-1 hover:text-[#B58A2A] transition-colors">
+                             View Deployment
+                             <span className="ml-2">→</span>
+                         </Link>
+                    </div>
+
+                    {/* Video Side */}
+                    <div className="relative group perspective-1000 order-1 lg:order-2">
+                         <div className="absolute -inset-4 bg-[#B58A2A]/5 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                         <div className="relative border border-[#D6D2CA] bg-[#F4F2EE] shadow-xl shadow-[#B58A2A]/5 overflow-hidden">
+                             <div className="aspect-[16/10] relative">
+                                <video
+                                    src="/portfolio.mov"
+                                    autoPlay
+                                    muted
+                                    loop
+                                    playsInline
+                                    className="w-full h-full object-cover hover:scale-[1.02] transition-transform duration-700"
+                                />
+                             </div>
+                             {/* Overlay UI elements */}
+                             <div className="absolute top-4 left-4 flex gap-2">
+                                <span className="bg-[#171412] text-white px-2 py-1 text-[10px] font-bold uppercase tracking-widest shadow-lg">BUILD: R3F_METABALLS</span>
+                             </div>
+                         </div>
+                    </div>
+                </div>
+            </div>
+
+            {/* DaveTrader Featured Build */}
+            <div className="mb-20">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    {/* Image Side */}
+                    <div className="relative group perspective-1000">
+                         <div className="absolute -inset-4 bg-[#B58A2A]/5 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                         <div className="relative border border-[#D6D2CA] bg-[#F4F2EE] shadow-xl shadow-[#B58A2A]/5 overflow-hidden">
+                             <div className="aspect-[16/10] relative">
+                                <Image
+                                    src="/davetrader.png"
+                                    alt="DaveTrader Dashboard"
+                                    fill
+                                    className="object-contain object-top hover:scale-[1.02] transition-transform duration-700"
+                                />
+                             </div>
+                             {/* Overlay UI elements */}
+                             <div className="absolute top-4 left-4 flex gap-2">
+                                <span className="bg-[#171412] text-white px-2 py-1 text-[10px] font-bold uppercase tracking-widest shadow-lg">Live System</span>
+                             </div>
+                         </div>
+                    </div>
+
+                    {/* Text Side */}
+                    <div className="lg:pl-8">
+                         <div className="text-[#B58A2A] font-mono text-xs mb-4">FABRICATION_LOG // 003</div>
                          <h3 className="text-3xl md:text-4xl font-bold uppercase text-[#171412] mb-4 leading-none">
                              DaveTrader <span className="block text-xl md:text-2xl text-[#666] mt-2">Market Analytics Console</span>
                          </h3>
@@ -203,85 +282,6 @@ export default function Home() {
                          </div>
 
                          <Link href="https://davestrades-web.vercel.app/" target="_blank" className="inline-flex items-center text-xs font-bold uppercase tracking-widest text-[#171412] border-b-2 border-[#B58A2A] pb-1 hover:text-[#B58A2A] transition-colors">
-                             View Deployment
-                             <span className="ml-2">→</span>
-                         </Link>
-                    </div>
-
-                    {/* Image Side */}
-                    <div className="relative group perspective-1000 order-1 lg:order-2">
-                         <div className="absolute -inset-4 bg-[#B58A2A]/5 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                         <div className="relative border border-[#D6D2CA] bg-[#F4F2EE] shadow-xl shadow-[#B58A2A]/5 overflow-hidden">
-                             <div className="aspect-[16/10] relative">
-                                <Image
-                                    src="/davetrader.png"
-                                    alt="DaveTrader Dashboard"
-                                    fill
-                                    className="object-contain object-top hover:scale-[1.02] transition-transform duration-700"
-                                />
-                             </div>
-                             {/* Overlay UI elements */}
-                             <div className="absolute top-4 left-4 flex gap-2">
-                                <span className="bg-[#171412] text-white px-2 py-1 text-[10px] font-bold uppercase tracking-widest shadow-lg">Live System</span>
-                             </div>
-                         </div>
-                    </div>
-                </div>
-            </div>
-
-            {/* Portfolio Reel Featured Build */}
-            <div className="mb-20">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                    {/* Video Side */}
-                    <div className="relative group perspective-1000">
-                         <div className="absolute -inset-4 bg-[#B58A2A]/5 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                         <div className="relative border border-[#D6D2CA] bg-[#F4F2EE] shadow-xl shadow-[#B58A2A]/5 overflow-hidden">
-                             <div className="aspect-[16/10] relative">
-                                <video
-                                    src="/portfolio.mov"
-                                    autoPlay
-                                    muted
-                                    loop
-                                    playsInline
-                                    className="w-full h-full object-cover hover:scale-[1.02] transition-transform duration-700"
-                                />
-                             </div>
-                             {/* Overlay UI elements */}
-                             <div className="absolute top-4 left-4 flex gap-2">
-                                <span className="bg-[#171412] text-white px-2 py-1 text-[10px] font-bold uppercase tracking-widest shadow-lg">BUILD: R3F_METABALLS</span>
-                             </div>
-                         </div>
-                    </div>
-
-                    {/* Text Side */}
-                    <div className="lg:pl-8">
-                         <div className="text-[#B58A2A] font-mono text-xs mb-4">FABRICATION_LOG // 003</div>
-                         <h3 className="text-3xl md:text-4xl font-bold uppercase text-[#171412] mb-4 leading-none">
-                             Morphing Lava Lamp <span className="block text-xl md:text-2xl text-[#666] mt-2">Interactive 3D UI System</span>
-                         </h3>
-                         <p className="text-lg text-[#555] font-light mb-8 leading-relaxed">
-                            A real-time 3D hero interface with fluid ‘metaball’ motion and responsive theming. Turns standard navigation into a smooth, interactive experience.
-                         </p>
-                         
-                         <div className="bg-[#F9F8F6] border border-[#E5E5E5] p-6 mb-8">
-                            <span className="text-[10px] font-bold text-[#B58A2A] uppercase tracking-widest mb-4 block">SYSTEM SPECS</span>
-                            <ul className="space-y-3">
-                                <li className="flex items-start text-sm text-[#555] font-mono">
-                                    <span className="text-[#B58A2A] mr-3">●</span> Stack: React, Vite, R3F (Three.js)
-                                </li>
-                                <li className="flex items-start text-sm text-[#555] font-mono">
-                                    <span className="text-[#B58A2A] mr-3">●</span> Rendering: Real-time procedural metaballs
-                                </li>
-                                <li className="flex items-start text-sm text-[#555] font-mono">
-                                    <span className="text-[#B58A2A] mr-3">●</span> Feature: Custom shader materials + Theming
-                                </li>
-                            </ul>
-                            <div className="mt-4 pt-4 border-t border-[#D6D2CA] text-[10px] text-[#999] font-mono uppercase tracking-wide">
-                                Performance-first rendering pipeline. No pre-rendered video.
-                            </div>
-                         </div>
-                         
-                         <Link href="https://seenaabed.com" target="_blank" className="inline-flex items-center text-xs font-bold uppercase tracking-widest text-[#171412] border-b-2 border-[#B58A2A] pb-1 hover:text-[#B58A2A] transition-colors">
                              View Deployment
                              <span className="ml-2">→</span>
                          </Link>
