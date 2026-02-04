@@ -18,7 +18,7 @@ export default function Footer() {
                      </div>
                      <div>
                         <h3 className="text-xl font-bold uppercase tracking-wider leading-none text-[#F4F2EE]">River City Foundry</h3>
-                        <div className="text-[#B58A2A] text-[10px] tracking-[0.3em] font-normal uppercase mt-1">Digital Studio</div>
+                        <div className="text-[#B58A2A] text-[10px] tracking-[0.3em] font-normal uppercase mt-1">Web & Software Studio</div>
                      </div>
                  </div>
                  <p className="text-[#9CA3AF] max-w-xs leading-relaxed font-sans">

@@ -23,7 +23,7 @@ export default function Navbar() {
             </Link>
             
             <Link href="/" className="text-lg font-bold tracking-tight text-[#171412] uppercase leading-none">
-                River City Foundry<br/><span className="text-[10px] tracking-[0.2em] text-[#B58A2A] font-normal">Digital Studio</span>
+                River City Foundry<br/><span className="text-[10px] tracking-[0.2em] text-[#B58A2A] font-normal">Web & Software Studio</span>
             </Link>
           </div>
 
