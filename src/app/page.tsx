@@ -129,8 +129,69 @@ export default function Home() {
       </section>
 
       {/* ──────────────────────────────────────────────────────────────────────────
-          FEATURED PROJECTS: PLAIN ENGLISH
+          CTA: THE INTERFACE
           ────────────────────────────────────────────────────────────────────────── */}
+      <section className="py-32 bg-soot text-white border-t-2 border-black text-center relative overflow-hidden">
+        {/* Machinist grid background effect */}
+        <div className="absolute inset-0 opacity-[0.08]" 
+             style={{ 
+                backgroundImage: `
+                  linear-gradient(to right, rgba(255,255,255, 0.3) 1px, transparent 1px),
+                  linear-gradient(to bottom, rgba(255,255,255, 0.3) 1px, transparent 1px)
+                `, 
+                backgroundSize: '48px 48px' 
+             }}>
+        </div>
+        
+        {/* Brass accent line at top */}
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-24 h-1 bg-brass"></div>
+        
+        <div className="max-w-3xl mx-auto px-6 relative z-10">
+          {/* Station Header */}
+          <div className="flex items-center justify-center gap-3 mb-6">
+            <div className="w-8 h-px bg-white/20"></div>
+            <span className="text-brass font-mono text-xs tracking-widest uppercase">Request a Build Slot</span>
+            <div className="w-8 h-px bg-white/20"></div>
+          </div>
+          
+          <h2 className="text-4xl md:text-5xl font-bold uppercase text-white mb-6 leading-tight">
+            Ready to upgrade?
+          </h2>
+          <p className="text-white/60 mb-10 max-w-xl mx-auto text-lg">
+            15-minute consult. Clear scope. Fixed quote.
+          </p>
+          
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-16">
+            <Link href="/consultation" className="inline-flex items-center justify-center px-12 py-5 text-sm font-bold uppercase tracking-widest bg-[#B58A2A] text-white hover:bg-[#C99B2E] transition-colors w-full sm:w-auto text-center">
+              Book Consult
+            </Link>
+             <Link href="/services" className="text-sm font-bold uppercase tracking-widest text-white/70 border-b border-white/30 hover:text-brass hover:border-brass transition-colors pb-1">
+              View Services →
+            </Link>
+          </div>
+
+          {/* Trust signals */}
+          <div className="border-t border-white/10 pt-8">
+            <div className="flex flex-wrap justify-center gap-x-12 gap-y-4 text-xs font-mono text-white/40 uppercase tracking-wider">
+                 <span className="flex items-center gap-2">
+                    <span className="text-brass text-[8px]">●</span> Fast Turnarounds
+                 </span>
+                 <span className="flex items-center gap-2">
+                    <span className="text-brass text-[8px]">●</span> Local Support
+                 </span>
+                 <span className="flex items-center gap-2">
+                    <span className="text-brass text-[8px]">●</span> Performance-First
+                 </span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  );
+}
+
+
       <section id="work" className="py-24 bg-white relative border-b border-rule">
         {/* Subtle Tech Grid */}
         <div className="absolute inset-0 pointer-events-none opacity-[0.03]"
