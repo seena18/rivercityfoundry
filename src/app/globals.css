@@ -4,12 +4,41 @@
   --foreground-rgb: 23, 20, 18; /* #171412 - Soot/Ink */
   --background-start-rgb: 244, 242, 238; /* #F4F2EE - Shop White */
   --background-end-rgb: 244, 242, 238;
+
+  /* Material Palette (Industrial Foundry) */
+  --paper: #F4F2EE;  /* page bg */
+  --bone:  #FDFBF7;  /* card surface */
+  --strip: #EBE4D6;  /* card header/footer strip */
+  --strip2:#E2D9C8;  /* stronger strip (hover) */
+  --soot:  #171412;  /* ink */
+  --muted: #5B554C;  /* secondary text */
+  --iron:  #232323;
+  --coal:  #0E0F10;
+
+  /* Lines & Borders */
+  --rule:  #D2C2AB;  /* card border */
+  --rule-2:#C8B79E;  /* section rules (darker) */
+
+  /* Metals */
+  --brass: #B58A2A;      /* Industrial Brass */
+  --brass-dark:#9A7422;  /* button / emphasis */
+  --rust:  #A24B2A;
+  --safety: #2EA6A6;
 }
 
 body {
-  color: #171412;
-  background: #F4F2EE;
+  color: var(--soot);
+  background: var(--paper);
   min-height: 100vh;
+}
+
+/* Scroll offset for sticky navbar */
+html {
+  scroll-padding-top: 120px;
+}
+
+section[id] {
+  scroll-margin-top: 120px;
 }
 
 /* Industrial Accents */
@@ -21,7 +50,210 @@ body {
 }
 
 .text-brass {
-    color: #B58A2A; /* Industrial Brass */
+    color: var(--brass);
+}
+
+/* Material Utilities */
+.bg-paper { background-color: var(--paper); }
+.bg-bone { background-color: var(--bone); }
+.bg-strip { background-color: var(--strip); }
+.bg-soot { background-color: var(--soot); }
+.bg-iron { background-color: var(--iron); }
+.bg-coal { background-color: var(--coal); }
+
+.text-soot { color: var(--soot); }
+.text-muted { color: var(--muted); }
+.text-iron { color: var(--iron); }
+.text-brass { color: var(--brass); }
+.text-rust { color: var(--rust); }
+.text-safety { color: var(--safety); }
+
+.border-rule { border-color: var(--rule); }
+.border-rule-2 { border-color: var(--rule-2); }
+.border-brass { border-color: var(--brass); }
+.border-safety { border-color: var(--safety); }
+
+/* Machined Rules */
+.hr-machined {
+    height: 2px;
+    background: var(--rule);
+    border: none;
+}
+
+/* Hardware Buttons */
+.btn-hardware-primary {
+    background-color: var(--soot);
+    color: var(--bone);
+    border: 1px solid rgba(0,0,0,0.25);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 0.75rem;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    transition: all 0.2s ease;
+    box-shadow: 
+        inset 0 1px 0 rgba(255,255,255,0.1),
+        0 2px 4px rgba(0,0,0,0.1);
+}
+.btn-hardware-primary:hover {
+    background-color: #2A2826;
+    transform: translateY(-1px);
+    box-shadow: 
+        inset 0 1px 0 rgba(255,255,255,0.1),
+        0 4px 8px rgba(0,0,0,0.15);
+}
+
+.btn-hardware-secondary {
+    background: transparent;
+    border: 1px solid var(--rule-2);
+    color: var(--soot);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 0.75rem;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    transition: all 0.2s ease;
+}
+.btn-hardware-secondary:hover {
+    border-color: var(--brass);
+    color: var(--brass-dark);
+    background: rgba(182,138,42,0.05);
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   SERVICE CARDS: Clean Spec Plate Style
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+.service-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background: var(--bone);
+    border: 1px solid rgba(0,0,0,0.16);
+    border-radius: 12px;
+    box-shadow: 0 10px 24px rgba(0,0,0,0.06);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+/* ONE signature detail: thin brass left rule */
+.service-card::after {
+    content: "";
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 2px;
+    background: rgba(181,138,42,0.85);
+}
+
+/* Featured card: slightly stronger brass stripe */
+.service-card-featured::after {
+    width: 3px;
+}
+
+.service-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 16px 32px rgba(0,0,0,0.10);
+}
+
+/* Card sections - paper rules, not tinted bands */
+.service-card__head {
+    padding: 10px 14px;
+    border-bottom: 1px solid rgba(0,0,0,0.10);
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.service-card__body {
+    padding: 16px 14px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.service-card__foot {
+    margin-top: auto;
+    padding: 12px 14px;
+    border-top: 1px solid rgba(0,0,0,0.10);
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Badge - subtle stamped look */
+.service-badge {
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    padding: 3px 8px;
+    border-radius: 999px;
+    color: rgba(181,138,42,0.95);
+    border: 1px solid rgba(181,138,42,0.45);
+    background: rgba(181,138,42,0.06);
+}
+
+/* Time chip - small, not full-width */
+.service-chip {
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 10px;
+    border-radius: 999px;
+    background: rgba(0,0,0,0.03);
+    border: 1px solid rgba(0,0,0,0.10);
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+}
+
+/* Legacy card-plate for backwards compat */
+.card-plate {
+    background: linear-gradient(180deg, var(--bone) 0%, #F5EEE2 100%);
+    border: 1px solid var(--rule);
+    border-radius: 8px;
+    position: relative;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+}
+
+/* Specs Box (Style A + D) */
+.card-specs {
+    background: #ffffff;
+    border: 1px solid var(--rule);
+    border-radius: 8px;
+    position: relative;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+    
+    /* Faint Hatch Texture */
+    background-image:
+        linear-gradient(0deg, rgba(255,255,255,0.6), rgba(255,255,255,0.6)),
+        repeating-linear-gradient(
+            135deg,
+            rgba(0,0,0,0.03) 0 6px,
+            rgba(0,0,0,0) 6px 14px
+        );
+}
+
+/* Icon Badge */
+.icon-badge {
+    width: 40px; height: 40px;
+    border-radius: 8px;
+    display: grid;
+    place-items: center;
+    background: rgba(182,138,42,0.08); /* brass with low opacity */
+    border: 1px solid rgba(182,138,42,0.2);
+    color: var(--brass-dark);
+}
+.icon-badge svg {
+    width: 20px; height: 20px;
 }
 
 .bg-iron {
@@ -39,4 +271,10 @@ body {
   background-color: #fdfbf7;
   opacity: 0.4;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
+}
+
+/* Pure noise overlay (no background color) */
+.noise-overlay {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
+  pointer-events: none;
 }

@@ -40,6 +40,15 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        {/* Preconnect to Calendly for faster widget load */}
+        <link rel="preconnect" href="https://assets.calendly.com" />
+        <link rel="preconnect" href="https://calendly.com" />
+        <link rel="dns-prefetch" href="https://assets.calendly.com" />
+        <link rel="dns-prefetch" href="https://calendly.com" />
+        {/* Prefetch Calendly script */}
+        <link rel="prefetch" href="https://assets.calendly.com/assets/external/widget.js" as="script" />
+      </head>
       <body className={`${inter.className} min-h-screen flex flex-col`}>
         <JsonLd />
         <Navbar />

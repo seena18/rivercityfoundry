@@ -4,7 +4,7 @@ import { InlineWidget } from "react-calendly";
 
 export default function Consultation() {
   return (
-    <div className="bg-[#F4F2EE] min-h-screen pt-12 pb-24 px-6 font-sans text-[#171412] relative overflow-hidden">
+    <div className="bg-paper min-h-screen pt-40 pb-24 px-6 font-sans text-soot relative overflow-hidden">
       {/* Background Grid/Lines */}
       <div className="absolute inset-0 z-0 pointer-events-none opacity-[0.02]" 
            style={{ backgroundImage: 'linear-gradient(to right, #171412 1px, transparent 1px), linear-gradient(to bottom, #171412 1px, transparent 1px)', backgroundSize: '4rem 4rem' }}>
@@ -19,13 +19,13 @@ export default function Consultation() {
 
       <div className="relative max-w-5xl mx-auto text-center z-10">
         
-        <h2 className="text-3xl font-bold uppercase tracking-tight text-[#171412] mb-4">Book a Session</h2>
+        <h2 className="text-3xl font-bold uppercase tracking-tight text-soot mb-4">Book a Session</h2>
         
         <p className="text-sm text-[#555] max-w-xl mx-auto mb-8 font-light">
           Let's discuss your build requirements. No sales scripts—just a feasibility check.
         </p>
         
-        <div className="bg-white border text-center border-[#D6D2CA] shadow-[4px_4px_0px_#D6D2CA] overflow-hidden min-h-[1050px]">
+        <div className="bg-white border text-center border-rule shadow-[4px_4px_0px_var(--rule)] overflow-hidden min-h-[1050px]">
              {/* Book your session below */}
             <InlineWidget 
               url="https://calendly.com/ssabed00/30min" 
@@ -37,8 +37,8 @@ export default function Consultation() {
                 backgroundColor: 'ffffff',
                 hideEventTypeDetails: false,
                 hideLandingPageDetails: false,
-                primaryColor: 'B58A2A',
-                textColor: '171412'
+                primaryColor: 'B68A2A',
+                textColor: '141414'
               }}
             />
         </div>

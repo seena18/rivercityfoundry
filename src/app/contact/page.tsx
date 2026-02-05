@@ -1,6 +1,6 @@
 export default function Contact() {
   return (
-    <div className="bg-[#F4F2EE] min-h-screen pt-12 pb-24 px-6 font-sans text-[#171412] relative overflow-hidden">
+    <div className="bg-paper min-h-screen pt-40 pb-24 px-6 font-sans text-soot relative overflow-hidden">
       {/* Background Grid/Lines */}
       <div className="absolute inset-0 z-0 pointer-events-none opacity-[0.02]" 
            style={{ backgroundImage: 'linear-gradient(to right, #171412 1px, transparent 1px), linear-gradient(to bottom, #171412 1px, transparent 1px)', backgroundSize: '4rem 4rem' }}>
@@ -15,24 +15,24 @@ export default function Contact() {
 
       <div className="relative max-w-xl mx-auto z-10">
         <div className="text-center mb-8">
-          <h2 className="text-3xl font-bold uppercase tracking-tight text-[#171412] mb-4">Start a Build</h2>
+          <h2 className="text-3xl font-bold uppercase tracking-tight text-soot mb-4">Start a Build</h2>
           <p className="text-sm text-[#555] font-light">
              Tell us about your project requirements. We usually respond within 24 hours.
           </p>
           <div className="mt-6 flex flex-col items-center gap-2">
-             <span className="text-[10px] font-mono text-[#B58A2A] uppercase tracking-widest">Immediate Inquiry? Start a Call</span>
-             <a href="tel:9165420331" className="text-2xl font-bold text-[#171412] hover:text-[#B58A2A] transition-colors border-b-2 border-[#B58A2A] pb-1">
+             <span className="text-[10px] font-mono text-brass uppercase tracking-widest">Immediate Inquiry? Start a Call</span>
+             <a href="tel:9165420331" className="text-2xl font-bold text-soot hover:text-brass transition-colors border-b-2 border-brass pb-1">
                 916.542.0331
              </a>
           </div>
         </div>
         
-        <div className="bg-white p-8 md:p-12 border border-[#D6D2CA] shadow-xl shadow-[#D6D2CA]/20 relative">
+        <div className="bg-white p-8 md:p-12 border border-rule shadow-xl shadow-rule/20 relative">
           {/* Corner Decor */}
-          <div className="absolute top-0 left-0 w-4 h-4 border-t-2 border-l-2 border-[#B58A2A]"></div>
-          <div className="absolute top-0 right-0 w-4 h-4 border-t-2 border-r-2 border-[#B58A2A]"></div>
-          <div className="absolute bottom-0 left-0 w-4 h-4 border-b-2 border-l-2 border-[#B58A2A]"></div>
-          <div className="absolute bottom-0 right-0 w-4 h-4 border-b-2 border-r-2 border-[#B58A2A]"></div>
+          <div className="absolute top-0 left-0 w-4 h-4 border-t-2 border-l-2 border-brass"></div>
+          <div className="absolute top-0 right-0 w-4 h-4 border-t-2 border-r-2 border-brass"></div>
+          <div className="absolute bottom-0 left-0 w-4 h-4 border-b-2 border-l-2 border-brass"></div>
+          <div className="absolute bottom-0 right-0 w-4 h-4 border-b-2 border-r-2 border-brass"></div>
 
           <form action="https://api.web3forms.com/submit" method="POST" className="grid grid-cols-1 gap-y-8">
             {/* REPLACE WITH YOUR ACCESS KEY FROM WEB3FORMS */}
@@ -43,31 +43,31 @@ export default function Contact() {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                 <div>
-                <label htmlFor="first-name" className="block text-[10px] font-bold text-[#171412] uppercase tracking-widest mb-2 font-mono">First name</label>
+                <label htmlFor="first-name" className="block text-[10px] font-bold text-soot uppercase tracking-widest mb-2 font-mono">First name</label>
                 <input type="text" name="first-name" id="first-name" autoComplete="given-name" 
-                        className="py-3 px-4 block w-full bg-[#F4F2EE] border-b border-[#D6D2CA] text-[#171412] focus:outline-none focus:border-[#B58A2A] transition-colors placeholder-gray-400" />
+                        className="py-3 px-4 block w-full bg-paper border-b border-rule text-soot focus:outline-none focus:border-brass transition-colors placeholder-gray-400" />
                 </div>
                 <div>
-                <label htmlFor="last-name" className="block text-[10px] font-bold text-[#171412] uppercase tracking-widest mb-2 font-mono">Last name</label>
+                <label htmlFor="last-name" className="block text-[10px] font-bold text-soot uppercase tracking-widest mb-2 font-mono">Last name</label>
                 <input type="text" name="last-name" id="last-name" autoComplete="family-name" 
-                        className="py-3 px-4 block w-full bg-[#F4F2EE] border-b border-[#D6D2CA] text-[#171412] focus:outline-none focus:border-[#B58A2A] transition-colors placeholder-gray-400" />
+                        className="py-3 px-4 block w-full bg-paper border-b border-rule text-soot focus:outline-none focus:border-brass transition-colors placeholder-gray-400" />
                 </div>
             </div>
 
             <div>
-              <label htmlFor="email" className="block text-[10px] font-bold text-[#171412] uppercase tracking-widest mb-2 font-mono">Email Address</label>
+              <label htmlFor="email" className="block text-[10px] font-bold text-soot uppercase tracking-widest mb-2 font-mono">Email Address</label>
               <input type="email" name="email" id="email" autoComplete="email" 
-                    className="py-3 px-4 block w-full bg-[#F4F2EE] border-b border-[#D6D2CA] text-[#171412] focus:outline-none focus:border-[#B58A2A] transition-colors placeholder-gray-400" />
+                    className="py-3 px-4 block w-full bg-paper border-b border-rule text-soot focus:outline-none focus:border-brass transition-colors placeholder-gray-400" />
             </div>
 
             <div>
-              <label htmlFor="message" className="block text-[10px] font-bold text-[#171412] uppercase tracking-widest mb-2 font-mono">Project Scope</label>
+              <label htmlFor="message" className="block text-[10px] font-bold text-soot uppercase tracking-widest mb-2 font-mono">Project Scope</label>
               <textarea id="message" name="message" rows={4} 
-                        className="py-3 px-4 block w-full bg-[#F4F2EE] border-b border-[#D6D2CA] text-[#171412] focus:outline-none focus:border-[#B58A2A] transition-colors placeholder-gray-400"></textarea>
+                        className="py-3 px-4 block w-full bg-paper border-b border-rule text-soot focus:outline-none focus:border-brass transition-colors placeholder-gray-400"></textarea>
             </div>
 
             <div className="pt-4">
-              <button type="submit" className="w-full inline-flex items-center justify-center px-8 py-4 bg-[#171412] text-[#F4F2EE] text-xs font-bold uppercase tracking-widest hover:bg-[#B58A2A] transition-colors">
+              <button type="submit" className="w-full btn-hardware-primary px-8 py-4 text-xs">
                 Send Request
               </button>
             </div>
