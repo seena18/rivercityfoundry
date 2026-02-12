@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import PreFooterCta from '@/components/PreFooterCta';
+import LighthouseAuditMini from '@/components/LighthouseAuditMini';
 
 export default function Home() {
   return (
@@ -113,21 +114,7 @@ export default function Home() {
                 </div>
 
                 {/* Lighthouse proof */}
-                <div className="mt-4 w-full">
-                  <div className="relative w-full aspect-[21/9] bg-white overflow-hidden border border-rule">
-                    <div className="absolute inset-y-0 inset-x-3">
-                      <Image
-                        src="/lighthouse-whitev2.png"
-                        alt="Google Lighthouse report example"
-                        fill
-                        sizes="(min-width: 1024px) 380px, 100vw"
-                        className="object-contain object-center"
-                        priority
-                      />
-                    </div>
-                    <div className="absolute top-0 right-0 w-1/4 h-1/4 bg-white" aria-hidden="true" />
-                  </div>
-                </div>
+                <LighthouseAuditMini />
               </div>
 
               <div className="w-full h-[1px] bg-rule"></div>
