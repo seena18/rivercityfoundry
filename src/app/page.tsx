@@ -308,10 +308,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ──────────────────────────────────────────────────────────────────────────
-          FAQ TEASER + CTA BAND (Dark Station)
+        {/* ──────────────────────────────────────────────────────────────────────────
+          CTA BAND (Dark Station)
           ────────────────────────────────────────────────────────────────────────── */}
-      <section className="py-32 bg-soot text-white border-t-2 border-black text-center relative overflow-hidden">
+        <section className="py-20 bg-soot text-white border-t-2 border-black text-center relative overflow-hidden">
         {/* Machinist grid background effect */}
         <div className="absolute inset-0 opacity-[0.08]" 
              style={{ 
@@ -324,37 +324,6 @@ export default function Home() {
         </div>
         
         <div className="max-w-4xl mx-auto px-6 relative z-10">
-          
-          {/* Section 1: FAQ Teaser */}
-          <div className="mb-24">
-             <div className="flex items-center justify-center gap-3 mb-12">
-               <div className="w-8 h-px bg-white/20"></div>
-                <span className="text-brass font-mono text-xs tracking-widest uppercase">COMMON QUESTIONS</span>
-                <div className="w-8 h-px bg-white/20"></div>
-             </div>
-             
-             <div className="grid gap-8 text-left max-w-3xl mx-auto">
-                {[
-                   { q: "What is the typical turnaround time?", a: "Most brochure websites take 2-3 weeks. Complex software/apps take 4-8 weeks depending on scope." },
-                   { q: "Do I own the website?", a: "Yes—domain, design, and files are yours. No hostage situations." },
-                   { q: "Do you offer hosting?", a: "Yes—we can host it for you via Vercel Edge Network, or work with your existing infrastructure." }
-                ].map((item, i) => (
-                   <div key={i} className="border-b border-white/10 pb-8 last:border-0 last:pb-0 group">
-                      <h3 className="text-white font-bold text-base uppercase mb-3 flex gap-4">
-                         <span className="text-brass font-mono text-xs mt-0.5">0{i+1}</span> {item.q}
-                      </h3>
-                      <p className="text-stone-200 text-base pl-8 leading-relaxed font-sans opacity-95 group-hover:opacity-100 transition-opacity max-w-2xl">{item.a}</p>
-                   </div>
-                ))}
-             </div>
-             <div className="mt-16 text-center">
-                <Link href="/faq" className="text-xs font-bold uppercase tracking-widest text-brass border-b border-brass pb-1 hover:text-white hover:border-white transition-colors">
-                   Read Full FAQ →
-                </Link>
-             </div>
-          </div>
-
-
           <PreFooterCta mode="embedded" />
 
         </div>
