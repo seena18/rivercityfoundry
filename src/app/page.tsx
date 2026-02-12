@@ -9,7 +9,7 @@ export default function Home() {
       {/* ──────────────────────────────────────────────────────────────────────────
           HERO: INDUSTRIAL / PLAIN ENGLISH
           ────────────────────────────────────────────────────────────────────────── */}
-      <section className="relative pt-40 pb-20 border-b border-rule overflow-hidden">
+      <section className="relative pt-40 pb-20 md:pb-24 border-b border-rule overflow-hidden">
         {/* Noise Texture */}
         <div className="absolute inset-0 z-0 opacity-40 noise-overlay mix-blend-multiply"></div>
 
@@ -50,7 +50,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6 relative z-10">
 
           {/* Top Spec Bar */}
-          <div className="flex flex-col md:flex-row border-b border-soot pb-6 mb-12 justify-between items-start md:items-end gap-4">
+          <div className="flex flex-col md:flex-row border-b border-soot pb-6 mb-10 justify-between items-start md:items-end gap-4">
             <div>
               <span className="block text-brass text-xs font-bold uppercase tracking-[0.2em] mb-1">
                 River City Foundry
@@ -66,17 +66,17 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
 
             {/* Left Column: Mission Statement */}
             <div className="lg:col-span-8">
-              <p className="text-xl md:text-2xl font-normal text-soot leading-relaxed max-w-3xl mb-8">
+              <p className="text-xl md:text-2xl font-normal text-soot leading-relaxed max-w-3xl mb-7">
                 A clean, professional website or web app that loads fast, looks great on phones, and makes it easy for customers to call, request a quote, or book you.
                 <span className="block text-sm font-bold text-soot mt-4 max-w-lg">We handle everything—design, build, and launch—so you can focus on the business.</span>
               </p>
 
               {/* Trust Indicators / Stamped Labels */}
-              <div className="flex flex-wrap gap-3 mb-10">
+              <div className="flex flex-wrap gap-3 mb-8">
                 <div className="flex items-center gap-2 px-3 py-1 bg-stone-200/50 border-l-2 border-brass">
                    <span className="text-[10px] font-bold uppercase tracking-widest text-soot">Founder-Led</span>
                 </div>
@@ -103,13 +103,30 @@ export default function Home() {
             </div>
 
             {/* Right Column: Key Metrics (The "Spec Strip") */}
-            <div className="lg:col-span-4 border-l border-rule pl-4 lg:pl-10 flex flex-col justify-center gap-8">
+            <div className="lg:col-span-4 border-l border-rule pl-4 lg:pl-10 flex flex-col justify-start pt-1 gap-6">
 
               <div className="relative">
                 <div className="text-brass text-xs font-mono mb-1">01 // PERFORMANCE</div>
                 <div className="text-xl font-bold text-soot uppercase">Speed & Performance</div>
                 <div className="text-xs text-stone-600 mt-1 font-mono">
-                  <span className="text-[#8C6A1F] font-bold">PROVEN:</span> Lighthouse 95+ scores on recent builds
+                  <span className="text-[#8C6A1F] font-bold">VERIFIED:</span> Passes Google’s speed + quality checks before launch.
+                </div>
+
+                {/* Lighthouse proof */}
+                <div className="mt-4 w-full">
+                  <div className="relative w-full aspect-[21/9] bg-white overflow-hidden border border-rule">
+                    <div className="absolute inset-y-0 inset-x-3">
+                      <Image
+                        src="/lighthouse-whitev2.png"
+                        alt="Google Lighthouse report example"
+                        fill
+                        sizes="(min-width: 1024px) 380px, 100vw"
+                        className="object-contain object-center"
+                        priority
+                      />
+                    </div>
+                    <div className="absolute top-0 right-0 w-1/4 h-1/4 bg-white" aria-hidden="true" />
+                  </div>
                 </div>
               </div>
 
@@ -259,14 +276,18 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div className="relative grid grid-cols-1 md:grid-cols-4 gap-8">
+            {/* Mobile vertical timeline rail */}
+            <div className="absolute left-3 top-2 bottom-2 w-px bg-rule md:hidden" aria-hidden="true"></div>
             {[
               { step: "01", title: "Consult & Scope", desc: "15-minute call — we align on goals and lock in the price." },
               { step: "02", title: "Design & Plan", desc: "See exactly what we're building before code starts." },
               { step: "03", title: "Build & Ship", desc: "Code production and content integration." },
               { step: "04", title: "Launch & Support", desc: "Final checks, SEO setup, and go-live." }
             ].map((item) => (
-              <div key={item.step} className="border-l-2 border-rule pl-6 py-2">
+              <div key={item.step} className="relative border-l-2 border-rule pl-10 md:pl-6 py-2">
+                {/* Mobile timeline dot */}
+                <div className="absolute left-[9px] top-4 w-3 h-3 bg-brass rounded-full border-2 border-paper md:hidden" aria-hidden="true"></div>
                 <div className="text-brass text-xs font-mono font-bold mb-1">STEP_{item.step}</div>
                 <h3 className="text-lg font-bold uppercase text-soot">{item.title}</h3>
                 <p className="text-sm text-stone-600 font-mono mt-1">{item.desc}</p>
@@ -275,7 +296,7 @@ export default function Home() {
           </div>
 
           {/* Timeline */}
-          <div className="mt-8 pt-8">
+          <div className="mt-8 pt-8 hidden md:block">
             <div className="flex items-start justify-between relative px-4">
               {/* Timeline line - positioned at dot level */}
               <div className="absolute left-0 right-0 top-[5px] h-[2px] bg-[#D2C2AB]"></div>

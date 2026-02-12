@@ -133,14 +133,18 @@ export default function ServicesPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div className="relative grid grid-cols-1 md:grid-cols-4 gap-8">
+            {/* Mobile vertical timeline rail */}
+            <div className="absolute left-3 top-2 bottom-2 w-px bg-rule md:hidden" aria-hidden="true"></div>
             {[
               { step: "01", title: "Consult & Scope", desc: "15-minute call — we align on goals and lock in the price." },
               { step: "02", title: "Design & Plan", desc: "See exactly what we're building before code starts." },
               { step: "03", title: "Build & Ship", desc: "We build it and load your content." },
               { step: "04", title: "Launch & Support", desc: "Final checks, SEO setup, and go-live." }
             ].map((item) => (
-              <div key={item.step} className="border-l-2 border-rule pl-6 py-2">
+              <div key={item.step} className="relative border-l-2 border-rule pl-10 md:pl-6 py-2">
+                {/* Mobile timeline dot */}
+                <div className="absolute left-[9px] top-4 w-3 h-3 bg-brass rounded-full border-2 border-paper md:hidden" aria-hidden="true"></div>
                 <div className="text-brass text-xs font-mono font-bold mb-1">STEP_{item.step}</div>
                 <h3 className="text-lg font-bold uppercase text-soot">{item.title}</h3>
                 <p className="text-sm text-stone-600 font-mono mt-1">{item.desc}</p>
@@ -149,7 +153,7 @@ export default function ServicesPage() {
           </div>
 
           {/* Timeline */}
-          <div className="mt-8 pt-8">
+          <div className="mt-8 pt-8 hidden md:block">
             <div className="flex items-start justify-between relative px-4">
               {/* Timeline line - positioned at dot level */}
               <div className="absolute left-0 right-0 top-[5px] h-[2px] bg-[#D2C2AB]"></div>
