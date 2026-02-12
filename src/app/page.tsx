@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import PreFooterCta from '@/components/PreFooterCta';
 
 export default function Home() {
   return (
@@ -8,7 +9,7 @@ export default function Home() {
       {/* ──────────────────────────────────────────────────────────────────────────
           HERO: INDUSTRIAL / PLAIN ENGLISH
           ────────────────────────────────────────────────────────────────────────── */}
-      <section className="relative pt-48 pb-20 border-b border-rule overflow-hidden">
+      <section className="relative pt-40 pb-20 border-b border-rule overflow-hidden">
         {/* Noise Texture */}
         <div className="absolute inset-0 z-0 opacity-40 noise-overlay mix-blend-multiply"></div>
 
@@ -59,8 +60,8 @@ export default function Home() {
               </h1>
             </div>
             <div className="text-right hidden md:block">
-              <div className="text-xs font-mono text-stone-600 mb-1">UNIT: SACRAMENTO, CA</div>
-              <div className="text-xs font-mono text-stone-600 mb-1">SERVING: NORCAL REGION</div>
+              <div className="text-xs font-mono text-stone-600 mb-1">Based in Sacramento</div>
+              <div className="text-xs font-mono text-stone-600 mb-1">Serving the US</div>
               <div className="text-xs font-mono text-brass">STATUS: ACCEPTING BUILDS</div>
             </div>
           </div>
@@ -70,31 +71,34 @@ export default function Home() {
             {/* Left Column: Mission Statement */}
             <div className="lg:col-span-8">
               <p className="text-xl md:text-2xl font-normal text-soot leading-relaxed max-w-3xl mb-8">
-                Every build includes a clear structure, mobile-first layout, and conversion-focused pages—so customers can find you, trust you, and contact you quickly.
-                <span className="block text-sm font-bold text-soot mt-4 max-w-lg">Based in Sacramento • Reply within 24 hours • Projects start at $2.5k</span>
+                A clean, professional website or web app that loads fast, looks great on phones, and makes it easy for customers to call, request a quote, or book you.
+                <span className="block text-sm font-bold text-soot mt-4 max-w-lg">We handle everything—design, build, and launch—so you can focus on the business.</span>
               </p>
 
               {/* Trust Indicators / Stamped Labels */}
-              <div className="flex flex-wrap gap-4 mb-10 font-mono text-[10px] text-stone-600 uppercase tracking-wider">
-                <div className="flex items-center border border-rule px-3 py-1 bg-white/50 transition-colors hover:border-brass">
-                  <div className="w-1.5 h-1.5 bg-brass mr-2"></div> Founder-Led
+              <div className="flex flex-wrap gap-3 mb-10">
+                <div className="flex items-center gap-2 px-3 py-1 bg-stone-200/50 border-l-2 border-brass">
+                   <span className="text-[10px] font-bold uppercase tracking-widest text-soot">Founder-Led</span>
                 </div>
-                <div className="flex items-center border border-rule px-3 py-1 bg-white/50 transition-colors hover:border-brass">
-                  <div className="w-1.5 h-1.5 bg-brass mr-2"></div> No Templates
+                <div className="flex items-center gap-2 px-3 py-1 bg-stone-200/50 border-l-2 border-brass">
+                   <span className="text-[10px] font-bold uppercase tracking-widest text-soot">No Templates</span>
                 </div>
-                <div className="flex items-center border border-rule px-3 py-1 bg-white/50 transition-colors hover:border-brass">
-                  <div className="w-1.5 h-1.5 bg-brass mr-2"></div> You Own Everything
+                <div className="flex items-center gap-2 px-3 py-1 bg-stone-200/50 border-l-2 border-brass">
+                   <span className="text-[10px] font-bold uppercase tracking-widest text-soot">You Own Everything</span>
                 </div>
               </div>
 
-              <div className="flex flex-wrap gap-4 items-center">
-                <Link href="/consultation" className="btn-hardware-primary px-8 py-4 text-xs">
-                  <span className="mr-2">Book 15-min Consult</span>
-                  <span>→</span>
-                </Link>
-                <Link href="#work" className="text-xs font-bold uppercase tracking-widest text-soot hover:text-brass transition-colors border-b border-soot/30 hover:border-brass pb-1">
-                  View Work
-                </Link>
+              <div className="flex flex-col gap-4">
+                <div className="flex flex-wrap gap-4 items-center">
+                  <Link href="/consultation" className="btn-hardware-primary px-8 py-4 text-xs">
+                    <span className="mr-2">Book 15-min consult</span>
+                    <span>→</span>
+                  </Link>
+                  <Link href="#work" className="text-xs font-bold uppercase tracking-widest text-soot hover:text-brass transition-colors border-b border-soot/30 hover:border-brass pb-1">
+                    View Work
+                  </Link>
+                </div>
+                <p className="text-xs font-mono text-stone-500">You own the code, design, and files—no lock-in.</p>
               </div>
             </div>
 
@@ -104,7 +108,9 @@ export default function Home() {
               <div className="relative">
                 <div className="text-brass text-xs font-mono mb-1">01 // PERFORMANCE</div>
                 <div className="text-xl font-bold text-soot uppercase">Speed & Performance</div>
-                <div className="text-xs text-stone-600 mt-1">Fast on phones. Built to convert.</div>
+                <div className="text-xs text-stone-600 mt-1 font-mono">
+                  <span className="text-[#8C6A1F] font-bold">PROVEN:</span> Lighthouse 95+ scores on recent builds
+                </div>
               </div>
 
               <div className="w-full h-[1px] bg-rule"></div>
@@ -112,7 +118,9 @@ export default function Home() {
               <div className="relative">
                 <div className="text-brass text-xs font-mono mb-1">02 // LEAD TIME</div>
                 <div className="text-xl font-bold text-soot uppercase">Live in 2-4 Weeks</div>
-                <div className="text-xs text-stone-600 mt-1">From kickoff to launch, no drawn-out timelines.</div>
+                <div className="text-xs text-stone-600 mt-1 font-mono">
+                  <span className="text-[#8C6A1F] font-bold">AVG:</span> 18-day turnaround for brochure sites
+                </div>
               </div>
 
               <div className="w-full h-[1px] bg-rule"></div>
@@ -120,7 +128,9 @@ export default function Home() {
               <div className="relative">
                 <div className="text-brass text-xs font-mono mb-1">03 // SEO</div>
                 <div className="text-xl font-bold text-soot uppercase">Found in Local Search</div>
-                <div className="text-xs text-stone-600 mt-1">Built-in SEO so customers find you on Google.</div>
+                <div className="text-xs text-stone-600 mt-1 font-mono">
+                  <span className="text-[#8C6A1F] font-bold">INCLUDED:</span> GBP + schema setup
+                </div>
               </div>
 
             </div>
@@ -129,387 +139,147 @@ export default function Home() {
       </section>
 
       {/* ──────────────────────────────────────────────────────────────────────────
-          CTA: THE INTERFACE
+          MINI WORK STRIP
           ────────────────────────────────────────────────────────────────────────── */}
-      <section className="py-32 bg-soot text-white border-t-2 border-black text-center relative overflow-hidden">
-        {/* Machinist grid background effect */}
-        <div className="absolute inset-0 opacity-[0.08]" 
-             style={{ 
-                backgroundImage: `
-                  linear-gradient(to right, rgba(255,255,255, 0.3) 1px, transparent 1px),
-                  linear-gradient(to bottom, rgba(255,255,255, 0.3) 1px, transparent 1px)
-                `, 
-                backgroundSize: '48px 48px' 
-             }}>
-        </div>
-        
-        {/* Brass accent line at top */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-24 h-1 bg-brass"></div>
-        
-        <div className="max-w-3xl mx-auto px-6 relative z-10">
-          {/* Station Header */}
-          <div className="flex items-center justify-center gap-3 mb-6">
-            <div className="w-8 h-px bg-white/20"></div>
-            <span className="text-brass font-mono text-xs tracking-widest uppercase">Request a Build Slot</span>
-            <div className="w-8 h-px bg-white/20"></div>
-          </div>
-          
-          <h2 className="text-4xl md:text-5xl font-bold uppercase text-white mb-6 leading-tight">
-            Ready to upgrade?
-          </h2>
-          <p className="text-white/60 mb-10 max-w-xl mx-auto text-lg">
-            15-minute consult. Clear scope. Fixed quote.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-16">
-            <Link href="/consultation" className="inline-flex items-center justify-center px-12 py-5 text-sm font-bold uppercase tracking-widest bg-[#B58A2A] text-white hover:bg-[#C99B2E] transition-colors w-full sm:w-auto text-center">
-              Book Consult
-            </Link>
-             <Link href="/services" className="text-sm font-bold uppercase tracking-widest text-white/70 border-b border-white/30 hover:text-brass hover:border-brass transition-colors pb-1">
-              View Services →
-            </Link>
-          </div>
-
-          {/* Trust signals */}
-          <div className="border-t border-white/10 pt-8">
-            <div className="flex flex-wrap justify-center gap-x-12 gap-y-4 text-xs font-mono text-white/40 uppercase tracking-wider">
-                 <span className="flex items-center gap-2">
-                    <span className="text-brass text-[8px]">●</span> Fast Turnarounds
-                 </span>
-                 <span className="flex items-center gap-2">
-                    <span className="text-brass text-[8px]">●</span> Local Support
-                 </span>
-                 <span className="flex items-center gap-2">
-                    <span className="text-brass text-[8px]">●</span> Performance-First
-                 </span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-    </div>
-  );
-}
-
-
-      <section id="work" className="py-24 bg-white relative border-b border-rule">
-        {/* Subtle Tech Grid */}
-        <div className="absolute inset-0 pointer-events-none opacity-[0.03]"
-             style={{ 
-               backgroundImage: 'radial-gradient(#171412 1px, transparent 1px)', 
-               backgroundSize: '24px 24px' 
-             }}>
-        </div>
-
-        <div className="max-w-7xl mx-auto px-6 relative z-10">
-
-          <div className="flex items-end justify-between mb-16 border-b border-rule pb-6">
-            <div>
-              <span className="text-brass font-mono text-xs mb-2 block">FABRICATION LOGS</span>
-              <h2 className="text-3xl font-bold uppercase text-soot">Project Gallery</h2>
-              <p className="text-xs text-stone-600 font-mono mt-2">Selected Work (Client + Internal Builds)</p>
-            </div>
-            <Link href="/contact" className="hidden sm:block text-xs font-bold uppercase tracking-widest hover:text-brass transition-colors underline decoration-brass decoration-2 underline-offset-4 text-soot">
-              Full Archive
-            </Link>
-          </div>
-
-          {/* 404 Leads Featured Build */}
-          <div className="mb-20">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              {/* Image Side */}
-              <div className="relative group perspective-1000">
-                <div className="absolute -inset-4 bg-brass/5 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                <div className="relative border border-rule bg-white shadow-xl shadow-brass/5 overflow-hidden">
-                  <div className="aspect-[16/10] relative">
-                    <Image
-                      src="/404leads.png"
-                      alt="404 Leads Interface"
-                      fill
-                      className="object-contain object-top hover:scale-[1.02] transition-transform duration-700"
+      <section className="py-20 bg-white border-b border-rule">
+        <div className="max-w-7xl mx-auto px-6">
+           <div className="flex items-end justify-between mb-12">
+              <div className="max-w-xl">
+                <span className="text-xs font-mono text-[#8C6A1F] uppercase tracking-widest mb-2 block">Case Studies</span>
+                <h2 className="text-3xl font-bold uppercase text-soot mb-3">Selected Work</h2>
+                <p className="text-stone-600 text-lg">Websites and tools—built for clarity, speed, and conversion.</p>
+              </div>
+              <Link href="/work" className="hidden md:block text-xs font-bold uppercase tracking-widest text-soot hover:text-[#8C6A1F] transition-colors border-b border-rule hover:border-[#8C6A1F] pb-1">
+                View Full Gallery
+              </Link>
+           </div>
+           
+           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {/* Project 1 */}
+              <Link href="/work" className="group block h-full flex flex-col" aria-label="View 404 Leads Case Study">
+                 <div className="aspect-[16/10] bg-stone-100 relative overflow-hidden border border-rule mb-4 group-hover:shadow-xl group-hover:shadow-brass/10 transition-shadow">
+                    <Image 
+                      src="/404leads.png" 
+                      alt="404 Leads Dashboard Interface" 
+                      fill 
+                      className="object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700" 
                     />
-                  </div>
-                  {/* Overlay UI elements */}
-                  <div className="absolute top-4 left-4 flex gap-2">
-                    <span className="bg-[#0E0F10] text-bone border border-brass/30 px-2 py-1 text-[10px] font-bold uppercase tracking-widest">Live System</span>
-                  </div>
-                </div>
-              </div>
+                    {/* Overlay Tags */}
+                    <div className="absolute top-3 left-3 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <span className="bg-[#0E0F10] text-white text-[9px] font-bold uppercase tracking-widest px-2 py-1">SaaS</span>
+                        <span className="bg-white text-soot text-[9px] font-bold uppercase tracking-widest px-2 py-1 border border-soot/10">Growth</span>
+                    </div>
+                 </div>
+                 <div className="flex flex-col flex-grow">
+                    <div className="flex justify-between items-start mb-2">
+                       <h3 className="text-lg font-bold uppercase text-soot group-hover:text-[#8C6A1F] transition-colors">404 Leads</h3>
+                       <span className="opacity-0 group-hover:opacity-100 text-[#8C6A1F] text-lg leading-none transition-opacity -translate-x-2 group-hover:translate-x-0 duration-300">→</span>
+                    </div>
+                    <p className="text-xs font-mono text-stone-500 uppercase mb-3 line-clamp-1">Automated outreach system</p>
+                    <div className="mt-auto pt-3 border-t border-rule/50">
+                       <p className="text-sm text-soot leading-snug">
+                          <span className="font-bold text-[#8C6A1F]">OUTCOME:</span> Saved 20 hrs/week in manual prospecting
+                       </p>
+                    </div>
+                 </div>
+              </Link>
 
-              {/* Text Side */}
-              <div className="lg:pl-8">
-                <div className="text-brass font-mono text-xs mb-4">FABRICATION_LOG // 001</div>
-                <h3 className="text-3xl md:text-4xl font-bold uppercase text-soot mb-4 leading-none">
-                  404 Leads <span className="block text-xl md:text-2xl text-stone-500 mt-2">Lead Discovery System</span>
-                </h3>
-                <p className="text-lg text-stone-600 font-light mb-8 leading-relaxed">
-                  A scanning tool that turns maps into qualified prospects—no spreadsheets, no guesswork. Finds local businesses that need a website, verifies contact details, and exports clean lists for outreach.
-                </p>
-
-                <div className="card-specs p-6 mb-8">
-                  <span className="text-[10px] font-bold text-brass uppercase tracking-widest mb-4 block">SYSTEM SPECS</span>
-                  <ul className="space-y-3">
-                    <li className="flex items-start text-sm text-stone-600 font-mono">
-                      <span className="text-brass mr-3">●</span> Map-based scanning by city + category
-                    </li>
-                    <li className="flex items-start text-sm text-stone-600 font-mono">
-                      <span className="text-brass mr-3">●</span> Website detection + manual verification
-                    </li>
-                    <li className="flex items-start text-sm text-stone-600 font-mono">
-                      <span className="text-brass mr-3">●</span> Built for speed: quick filters and fast review
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Portfolio Reel Featured Build */}
-          <div className="mb-20">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center lg:flex-row-reverse">
-              {/* Text Side */}
-              <div className="lg:pr-8 order-2 lg:order-1">
-                <div className="text-brass font-mono text-xs mb-4">FABRICATION_LOG // 002</div>
-                <h3 className="text-3xl md:text-4xl font-bold uppercase text-soot mb-4 leading-none">
-                  Lava Lamp <span className="block text-xl md:text-2xl text-stone-500 mt-2">Interactive 3D UI System</span>
-                </h3>
-                <p className="text-lg text-stone-600 font-light mb-8 leading-relaxed">
-                  A real-time 3D hero interface with fluid ‘metaball’ motion and responsive theming. Turns standard navigation into a smooth, interactive experience.
-                </p>
-
-                <div className="card-specs p-6 mb-8">
-                  <span className="text-[10px] font-bold text-brass uppercase tracking-widest mb-4 block">SYSTEM SPECS</span>
-                  <ul className="space-y-3">
-                    <li className="flex items-start text-sm text-stone-600 font-mono">
-                      <span className="text-brass mr-3">●</span> Stack: React, Vite, R3F (Three.js)
-                    </li>
-                    <li className="flex items-start text-sm text-stone-600 font-mono">
-                      <span className="text-brass mr-3">●</span> Rendering: Real-time procedural metaballs
-                    </li>
-                    <li className="flex items-start text-sm text-stone-600 font-mono">
-                      <span className="text-brass mr-3">●</span> Feature: Custom shader materials + Theming
-                    </li>
-                  </ul>
-                  <div className="mt-4 pt-4 border-t border-rule text-[10px] text-stone-400 font-mono uppercase tracking-wide">
-                    Performance-first rendering pipeline. No pre-rendered video.
-                  </div>
-                </div>
-
-                <Link href="https://seenaabed.com" target="_blank" className="inline-flex items-center text-xs font-bold uppercase tracking-widest text-soot border-b-2 border-brass pb-1 hover:text-brass transition-colors">
-                  View Deployment
-                  <span className="ml-2">→</span>
-                </Link>
-              </div>
-
-              {/* Video Side */}
-              <div className="relative group perspective-1000 order-1 lg:order-2">
-                <div className="absolute -inset-4 bg-brass/5 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                <div className="relative border border-rule bg-white shadow-xl shadow-brass/5 overflow-hidden">
-                  <div className="aspect-[16/10] relative">
-                    <video
-                      src="/portfolio.mov"
-                      autoPlay
-                      muted
-                      loop
-                      playsInline
-                      className="w-full h-full object-cover hover:scale-[1.02] transition-transform duration-700"
+              {/* Project 2 */}
+                <Link href="/work" className="group block h-full flex flex-col" aria-label="View Lava Lamp Work">
+                 <div className="aspect-[16/10] bg-black relative overflow-hidden border border-rule mb-4 group-hover:shadow-xl group-hover:shadow-brass/10 transition-shadow">
+                    <video 
+                      src="/portfolio.mov" 
+                      autoPlay 
+                      muted 
+                      loop 
+                      playsInline 
+                      className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-700"
+                      aria-label="Lava Lamp e-commerce demo video"
                     />
-                  </div>
-                  {/* Overlay UI elements */}
-                  <div className="absolute top-4 left-4 flex gap-2">
-                    <span className="bg-[#0E0F10] text-bone border border-brass/30 px-2 py-1 text-[10px] font-bold uppercase tracking-widest">BUILD: R3F_METABALLS</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+                     <div className="absolute top-3 left-3 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <span className="bg-[#0E0F10] text-white text-[9px] font-bold uppercase tracking-widest px-2 py-1">E-Comm</span>
+                        <span className="bg-white text-soot text-[9px] font-bold uppercase tracking-widest px-2 py-1 border border-soot/10">WebGL</span>
+                    </div>
+                 </div>
+                 <div className="flex flex-col flex-grow">
+                    <div className="flex justify-between items-start mb-2">
+                       <h3 className="text-lg font-bold uppercase text-soot group-hover:text-[#8C6A1F] transition-colors">Lava Lamp</h3>
+                       <span className="opacity-0 group-hover:opacity-100 text-[#8C6A1F] text-lg leading-none transition-opacity -translate-x-2 group-hover:translate-x-0 duration-300">→</span>
+                    </div>
+                    <p className="text-xs font-mono text-stone-500 uppercase mb-3 line-clamp-1">Interactive Brand Experience</p>
+                    <div className="mt-auto pt-3 border-t border-rule/50">
+                       <p className="text-sm text-soot leading-snug">
+                          <span className="font-bold text-[#8C6A1F]">OUTCOME:</span> +40% time on site vs. template
+                       </p>
+                    </div>
+                 </div>
+              </Link>
 
-          {/* DaveTrader Featured Build */}
-          <div className="mb-20">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              {/* Image Side */}
-              <div className="relative group perspective-1000">
-                <div className="absolute -inset-4 bg-brass/5 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                <div className="relative border border-rule bg-white shadow-xl shadow-brass/5 overflow-hidden">
-                  <div className="aspect-[16/10] relative">
-                    <Image
-                      src="/davetrader.png"
-                      alt="DaveTrader Dashboard"
-                      fill
-                      className="object-contain object-top hover:scale-[1.02] transition-transform duration-700"
+              {/* Project 3 */}
+              <Link href="/work" className="group block h-full flex flex-col" aria-label="View DaveTrader Case Study">
+                 <div className="aspect-[16/10] bg-stone-100 relative overflow-hidden border border-rule mb-4 group-hover:shadow-xl group-hover:shadow-brass/10 transition-shadow">
+                    <Image 
+                      src="/davetrader.png" 
+                      alt="DaveTrader Dashboard Interface" 
+                      fill 
+                      className="object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700" 
                     />
-                  </div>
-                  {/* Overlay UI elements */}
-                  <div className="absolute top-4 left-4 flex gap-2">
-                    <span className="bg-[#0E0F10] text-bone border border-brass/30 px-2 py-1 text-[10px] font-bold uppercase tracking-widest">Live System</span>
-                  </div>
-                </div>
-              </div>
-
-              {/* Text Side */}
-              <div className="lg:pl-8">
-                <div className="text-brass font-mono text-xs mb-4">FABRICATION_LOG // 003</div>
-                <h3 className="text-3xl md:text-4xl font-bold uppercase text-soot mb-4 leading-none">
-                  DaveTrader <span className="block text-xl md:text-2xl text-stone-500 mt-2">Market Analytics Console</span>
-                </h3>
-                <p className="text-lg text-stone-600 font-light mb-8 leading-relaxed">
-                  A journaling and analytics dashboard that helps traders review signals, test ideas, and stay consistent. Built for clarity and decision support, not hype.
-                </p>
-
-                <div className="card-specs p-6 mb-8">
-                  <span className="text-[10px] font-bold text-brass uppercase tracking-widest mb-4 block">SYSTEM SPECS</span>
-                  <ul className="space-y-3">
-                    <li className="flex items-start text-sm text-stone-600 font-mono">
-                      <span className="text-brass mr-3">●</span> Real-time chart rendering & indicators
-                    </li>
-                    <li className="flex items-start text-sm text-stone-600 font-mono">
-                      <span className="text-brass mr-3">●</span> Strategy backtesting interface
-                    </li>
-                    <li className="flex items-start text-sm text-stone-600 font-mono">
-                      <span className="text-brass mr-3">●</span> Automated journal & performance metrics
-                    </li>
-                  </ul>
-                  <div className="mt-4 pt-4 border-t border-rule text-[10px] text-stone-400 font-mono uppercase tracking-wide">
-                    Educational tooling. No guaranteed returns. No ‘signals’ sold.
-                  </div>
-                </div>
-
-                <Link href="https://davestrades-web.vercel.app/" target="_blank" className="inline-flex items-center text-xs font-bold uppercase tracking-widest text-soot border-b-2 border-brass pb-1 hover:text-brass transition-colors">
-                  View Deployment
-                  <span className="ml-2">→</span>
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>      {/* ──────────────────────────────────────────────────────────────────────────
-          SERVICES (Clean System)
-          ────────────────────────────────────────────────────────────────────────── */}
-      <section id="services" className="py-24 bg-[#171412] text-[#F4F2EE] relative overflow-hidden">
-        {/* Decorative Grid */}
-        <div className="absolute inset-0 opacity-[0.03] pointer-events-none"
-          style={{ backgroundImage: 'linear-gradient(#F4F2EE 1px, transparent 1px), linear-gradient(90deg, #F4F2EE 1px, transparent 1px)', backgroundSize: '3rem 3rem' }}>
-        </div>
-
-        <div className="max-w-7xl mx-auto px-6 relative z-10">
-          <div className="mb-16 border-b border-[#333] pb-8">
-            <span className="text-[#A88B4D] font-mono text-xs mb-4 block">STATION / 01</span>
-            <h2 className="text-4xl md:text-5xl font-bold uppercase mb-4 leading-tight">
-              Services Menu
-            </h2>
-            <p className="text-[#E5E7EB] max-w-2xl text-lg font-light">
-              Pick the build type — we'll scope and quote in 15 minutes.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Custom Website Design */}
-            <div className="bg-[#1F1C19] border border-[#333] p-8 hover:border-[#A88B4D] transition-colors group relative">
-              <span className="absolute top-4 right-4 bg-[#A88B4D] text-[#171412] text-[10px] font-bold uppercase tracking-widest px-2 py-1">Popular</span>
-              <div className="text-[#A88B4D] font-mono text-xs mb-6">SVC / 01</div>
-              <h3 className="text-2xl font-bold uppercase mb-2 text-[#F4F2EE]">Custom Website Design</h3>
-              <p className="text-sm text-[#9CA3AF] mb-6">High-performance build for credibility & sales.</p>
-              <ul className="space-y-3 mb-6 text-[#9CA3AF] text-sm group-hover:text-[#E5E7EB] transition-colors">
-                <li className="flex items-start"><span className="text-[#A88B4D] mr-2">›</span> Custom Design (No Templates)</li>
-                <li className="flex items-start"><span className="text-[#A88B4D] mr-2">›</span> Mobile-First & Fast</li>
-                <li className="flex items-start"><span className="text-[#A88B4D] mr-2">›</span> CMS Integration</li>
-              </ul>
-              <div className="text-xs text-[#9CA3AF] mb-4">
-                <span className="text-[#A88B4D]">Best for:</span> Service Businesses, Agencies
-              </div>
-              <div className="flex items-center justify-between border-t border-[#333] pt-6 mt-auto">
-                <div>
-                  <div className="text-xs text-[#9CA3AF] mb-1">From</div>
-                  <div className="text-lg font-bold text-[#F4F2EE]">$3.5k</div>
-                </div>
-                <Link href="/consultation" className="text-xs font-bold uppercase tracking-widest text-[#A88B4D] border-b border-[#A88B4D] pb-1 hover:text-white hover:border-white transition-colors">
-                  Get Quote →
-                </Link>
-              </div>
-            </div>
-
-            {/* Software & Apps */}
-            <div className="bg-[#1F1C19] border border-[#333] p-8 hover:border-[#A88B4D] transition-colors group">
-              <div className="text-[#A88B4D] font-mono text-xs mb-6">SVC / 02</div>
-              <h3 className="text-2xl font-bold uppercase mb-2 text-[#F4F2EE]">Software & Apps</h3>
-              <p className="text-sm text-[#9CA3AF] mb-6">Custom tools to automate your operations.</p>
-              <ul className="space-y-3 mb-6 text-[#9CA3AF] text-sm group-hover:text-[#E5E7EB] transition-colors">
-                <li className="flex items-start"><span className="text-[#A88B4D] mr-2">›</span> Client Portals & Dashboards</li>
-                <li className="flex items-start"><span className="text-[#A88B4D] mr-2">›</span> Workflow Automation</li>
-                <li className="flex items-start"><span className="text-[#A88B4D] mr-2">›</span> Data Visualization</li>
-              </ul>
-              <div className="text-xs text-[#9CA3AF] mb-4">
-                <span className="text-[#A88B4D]">Best for:</span> Replacing spreadsheets & admin
-              </div>
-              <div className="flex items-center justify-between border-t border-[#333] pt-6 mt-auto">
-                <div>
-                  <div className="text-xs text-[#9CA3AF] mb-1">Timeline</div>
-                  <div className="text-lg font-bold text-[#F4F2EE]">4–8 weeks</div>
-                </div>
-                <Link href="/consultation" className="text-xs font-bold uppercase tracking-widest text-[#A88B4D] border-b border-[#A88B4D] pb-1 hover:text-white hover:border-white transition-colors">
-                  Get Quote →
-                </Link>
-              </div>
-            </div>
-
-            {/* Website Redesigns */}
-            <div className="bg-[#1F1C19] border border-[#333] p-8 hover:border-[#A88B4D] transition-colors group">
-              <div className="text-[#A88B4D] font-mono text-xs mb-6">SVC / 03</div>
-              <h3 className="text-2xl font-bold uppercase mb-2 text-[#F4F2EE]">Website Redesigns</h3>
-              <p className="text-sm text-[#9CA3AF] mb-6">Rebuild existing sites for speed & conversion.</p>
-              <ul className="space-y-3 mb-6 text-[#9CA3AF] text-sm group-hover:text-[#E5E7EB] transition-colors">
-                <li className="flex items-start"><span className="text-[#A88B4D] mr-2">›</span> Full UX/UI Audit</li>
-                <li className="flex items-start"><span className="text-[#A88B4D] mr-2">›</span> Performance Optimization</li>
-                <li className="flex items-start"><span className="text-[#A88B4D] mr-2">›</span> Message Refinement</li>
-              </ul>
-              <div className="text-xs text-[#9CA3AF] mb-4">
-                <span className="text-[#A88B4D]">Best for:</span> Outdated sites, low conversion
-              </div>
-              <div className="flex items-center justify-between border-t border-[#333] pt-6 mt-auto">
-                <div>
-                  <div className="text-xs text-[#9CA3AF] mb-1">From</div>
-                  <div className="text-lg font-bold text-[#F4F2EE]">$2.5k</div>
-                </div>
-                <Link href="/consultation" className="text-xs font-bold uppercase tracking-widest text-[#A88B4D] border-b border-[#A88B4D] pb-1 hover:text-white hover:border-white transition-colors">
-                  Get Quote →
-                </Link>
-              </div>
-            </div>
-          </div>
+                    <div className="absolute top-3 left-3 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <span className="bg-[#0E0F10] text-white text-[9px] font-bold uppercase tracking-widest px-2 py-1">FinTech</span>
+                        <span className="bg-white text-soot text-[9px] font-bold uppercase tracking-widest px-2 py-1 border border-soot/10">D3.js</span>
+                    </div>
+                 </div>
+                 <div className="flex flex-col flex-grow">
+                    <div className="flex justify-between items-start mb-2">
+                       <h3 className="text-lg font-bold uppercase text-soot group-hover:text-[#8C6A1F] transition-colors">DaveTrader</h3>
+                       <span className="opacity-0 group-hover:opacity-100 text-[#8C6A1F] text-lg leading-none transition-opacity -translate-x-2 group-hover:translate-x-0 duration-300">→</span>
+                    </div>
+                    <p className="text-xs font-mono text-stone-500 uppercase mb-3 line-clamp-1">High-Frequency Trading Dash</p>
+                    <div className="mt-auto pt-3 border-t border-rule/50">
+                       <p className="text-sm text-soot leading-snug">
+                          <span className="font-bold text-[#8C6A1F]">OUTCOME:</span> &lt;50ms latency
+                       </p>
+                    </div>
+                 </div>
+              </Link>
+           </div>
         </div>
       </section>
 
       {/* ──────────────────────────────────────────────────────────────────────────
           PROCESS (Build Pipeline)
           ────────────────────────────────────────────────────────────────────────── */}
-      <section className="py-20 bg-[#F4F2EE] border-t border-[#D6D2CA]">
+      <section className="py-20 bg-[#F4F2EE] border-b border-rule" style={{ position: 'relative', zIndex: 1 }}>
         <div className="max-w-7xl mx-auto px-6">
           <div className="mb-12">
-            <span className="text-[#B58A2A] font-mono text-xs mb-2 block">PROCESS_QP</span>
-            <h2 className="text-3xl font-bold uppercase text-[#171412]">Build Pipeline</h2>
+            <span className="text-[#8C6A1F] font-mono text-xs mb-2 block tracking-widest">The Pipeline</span>
+            <h2 className="text-3xl font-bold uppercase text-soot mb-4">How We Forge Your Build</h2>
+            <p className="text-stone-600 text-lg max-w-2xl">
+              A tight, 4-step process—clear scope, fast delivery, and clean handoff. Websites and software included.
+            </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {[
               { step: "01", title: "Consult & Scope", desc: "15-minute call — we align on goals and lock in the price." },
-              { step: "02", title: "Design & Wireframe", desc: "See exactly what we're building before code starts." },
-              { step: "03", title: "Build & Develop", desc: "Code production and content integration." },
+              { step: "02", title: "Design & Plan", desc: "See exactly what we're building before code starts." },
+              { step: "03", title: "Build & Ship", desc: "Code production and content integration." },
               { step: "04", title: "Launch & Support", desc: "Final checks, SEO setup, and go-live." }
             ].map((item) => (
-              <div key={item.step} className="border-l-2 border-[#D6D2CA] pl-6 py-2">
-                <div className="text-[#B58A2A] text-xs font-mono font-bold mb-1">STEP_{item.step}</div>
-                <h3 className="text-lg font-bold uppercase text-[#171412]">{item.title}</h3>
-                <p className="text-sm text-[#555] font-mono mt-1">{item.desc}</p>
+              <div key={item.step} className="border-l-2 border-rule pl-6 py-2">
+                <div className="text-brass text-xs font-mono font-bold mb-1">STEP_{item.step}</div>
+                <h3 className="text-lg font-bold uppercase text-soot">{item.title}</h3>
+                <p className="text-sm text-stone-600 font-mono mt-1">{item.desc}</p>
               </div>
             ))}
           </div>
 
           {/* Timeline */}
-          <div className="mt-8">
-            <div className="flex items-start justify-between relative">
+          <div className="mt-8 pt-8">
+            <div className="flex items-start justify-between relative px-4">
               {/* Timeline line - positioned at dot level */}
-              <div className="absolute left-0 right-0 top-[6px] h-[2px] bg-[#D6D2CA]"></div>
-              
+              <div className="absolute left-0 right-0 top-[5px] h-[2px] bg-[#D2C2AB]"></div>
+
               {/* Timeline markers */}
               {[
                 { label: "Day 1", title: "Kickoff" },
@@ -518,10 +288,10 @@ export default function Home() {
                 { label: "Day 21+", title: "Launch" }
               ].map((marker, i) => (
                 <div key={i} className="relative z-10 flex flex-col items-center">
-                  <div className="w-3 h-3 bg-[#B58A2A] rounded-full border-2 border-[#F4F2EE]"></div>
+                  <div className="w-3 h-3 bg-brass rounded-full border-2 border-paper"></div>
                   <div className="mt-3 text-center">
-                    <div className="text-[10px] font-mono text-[#B58A2A] font-bold">{marker.label}</div>
-                    <div className="text-xs font-bold uppercase text-[#171412]">{marker.title}</div>
+                    <div className="text-[10px] font-mono text-brass font-bold">{marker.label}</div>
+                    <div className="text-xs font-bold uppercase text-soot">{marker.title}</div>
                   </div>
                 </div>
               ))}
@@ -531,83 +301,7 @@ export default function Home() {
       </section>
 
       {/* ──────────────────────────────────────────────────────────────────────────
-          FAQ (Accordion System)
-          ────────────────────────────────────────────────────────────────────────── */}
-      <section className="py-24 bg-white border-t-2 border-rule relative">
-        <div className="max-w-7xl mx-auto px-6">
-          
-           {/* Plate Header */}
-             <div className="mb-16 border-b-2 border-rule pb-6 flex flex-col md:flex-row md:items-end justify-between gap-6">
-                <div>
-                   <div className="flex items-center gap-2 mb-2">
-                        <div className="w-2 h-2 bg-brass rounded-full"></div>
-                        <span className="text-brass font-mono text-xs uppercase tracking-widest">STATION / 03</span>
-                   </div>
-                   <h2 className="text-4xl font-bold uppercase text-soot leading-none">Field Report</h2>
-                   <p className="text-sm text-stone-600 font-mono mt-2">Common questions, answered straight.</p>
-                </div>
-            </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
-            
-            {/* Accordion List */}
-            <div className="lg:col-span-8 flex flex-col gap-4">
-                 {[
-                   { q: "Do I need to write the content myself?", a: "No. We can handle copywriting, structure, and messaging. If you have existing content, we'll refine it for conversion." },
-                   { q: "What is the typical turnaround time?", a: "Most brochure websites take 2-3 weeks. Complex software or apps take 4-8 weeks depending on scope." },
-                   { q: "Do I own the website?", a: "100%. You own the code, the domain, and the design. We don't lock you into proprietary platforms." },
-                   { q: "Can you fix my existing slow site?", a: "Yes. We perform a technical audit to identify bottlenecks and can usually rebuild or refactor for significant speed gains." }
-                 ].map((item, i) => (
-                    <details key={i} className="group border border-rule bg-[#FAF9F6] open:bg-white open:ring-1 open:ring-rule transition-all cursor-pointer">
-                        <summary className="flex items-center justify-between p-6 font-bold uppercase text-soot list-none select-none">
-                            <span className="flex items-center gap-4">
-                                <span className="text-brass font-mono text-xs">0{i+1}</span>
-                                {item.q}
-                            </span>
-                            <span className="text-brass group-open:rotate-180 transition-transform">▼</span>
-                        </summary>
-                        <div className="px-6 pb-6 pl-14 text-sm text-stone-600 leading-relaxed max-w-2xl">
-                            {item.a}
-                        </div>
-                    </details>
-                 ))}
-            </div>
-
-            {/* Still Unsure Plate */}
-            <div className="lg:col-span-4">
-                <div className="bg-[#171412] text-white p-8 border-2 border-[#171412] relative overflow-hidden shadow-2xl">
-                    <div className="absolute top-0 right-0 p-3">
-                         <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse shadow-[0_0_8px_rgba(34,197,94,0.6)]"></div>
-                    </div>
-                    <div className="text-brass font-mono text-xs uppercase tracking-widest mb-4 flex items-center gap-2">
-                        <div className="w-1 h-3 bg-brass"></div>
-                        DIRECT LINE
-                    </div>
-                    <h3 className="text-xl font-bold uppercase mb-4 text-white">Still Unsure?</h3>
-                    <p className="text-sm text-white/70 mb-8 leading-relaxed font-mono">
-                        Text or call. I'll tell you if we're a good fit in 2 minutes. No sales script.
-                    </p>
-                    
-                    <div className="flex flex-col gap-4">
-                        <div className="flex items-center gap-3 text-sm font-mono border-b border-white/10 pb-3">
-                            <span className="text-brass font-bold">TEL //</span> <span className="text-white tracking-widest">(916) 555-0123</span>
-                        </div>
-                         <div className="flex items-center gap-3 text-sm font-mono border-b border-white/10 pb-3">
-                            <span className="text-brass font-bold">HRS //</span> <span className="text-white tracking-widest">9AM - 5PM PST</span>
-                        </div>
-                         <div className="flex items-center gap-3 text-sm font-mono">
-                            <span className="text-brass font-bold">RES //</span> <span className="text-green-500 tracking-widest">&lt; 2 HRS</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
-      {/* ──────────────────────────────────────────────────────────────────────────
-          CTA: THE INTERFACE
+          FAQ TEASER + CTA BAND (Dark Station)
           ────────────────────────────────────────────────────────────────────────── */}
       <section className="py-32 bg-soot text-white border-t-2 border-black text-center relative overflow-hidden">
         {/* Machinist grid background effect */}
@@ -621,51 +315,43 @@ export default function Home() {
              }}>
         </div>
         
-        {/* Brass accent line at top */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-24 h-1 bg-brass"></div>
-        
-        <div className="max-w-3xl mx-auto px-6 relative z-10">
-          {/* Station Header */}
-          <div className="flex items-center justify-center gap-3 mb-6">
-            <div className="w-8 h-px bg-white/20"></div>
-            <span className="text-brass font-mono text-xs tracking-widest uppercase">Request a Build Slot</span>
-            <div className="w-8 h-px bg-white/20"></div>
-          </div>
+        <div className="max-w-4xl mx-auto px-6 relative z-10">
           
-          <h2 className="text-4xl md:text-5xl font-bold uppercase text-white mb-6 leading-tight">
-            Ready to upgrade?
-          </h2>
-          <p className="text-white/60 mb-10 max-w-xl mx-auto text-lg">
-            15-minute consult. Clear scope. Fixed quote.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-16">
-            <Link href="/consultation" className="inline-flex items-center justify-center px-12 py-5 text-sm font-bold uppercase tracking-widest bg-[#B58A2A] text-white hover:bg-[#C99B2E] transition-colors w-full sm:w-auto text-center">
-              Book Consult
-            </Link>
-             <Link href="/services" className="text-sm font-bold uppercase tracking-widest text-white/70 border-b border-white/30 hover:text-brass hover:border-brass transition-colors pb-1">
-              View Services →
-            </Link>
+          {/* Section 1: FAQ Teaser */}
+          <div className="mb-24">
+             <div className="flex items-center justify-center gap-3 mb-12">
+               <div className="w-8 h-px bg-white/20"></div>
+                <span className="text-brass font-mono text-xs tracking-widest uppercase">COMMON QUESTIONS</span>
+                <div className="w-8 h-px bg-white/20"></div>
+             </div>
+             
+             <div className="grid gap-8 text-left max-w-3xl mx-auto">
+                {[
+                   { q: "What is the typical turnaround time?", a: "Most brochure websites take 2-3 weeks. Complex software/apps take 4-8 weeks depending on scope." },
+                   { q: "Do I own the website?", a: "Yes—domain, design, and files are yours. No hostage situations." },
+                   { q: "Do you offer hosting?", a: "Yes—we can host it for you via Vercel Edge Network, or work with your existing infrastructure." }
+                ].map((item, i) => (
+                   <div key={i} className="border-b border-white/10 pb-8 last:border-0 last:pb-0 group">
+                      <h3 className="text-white font-bold text-base uppercase mb-3 flex gap-4">
+                         <span className="text-brass font-mono text-xs mt-0.5">0{i+1}</span> {item.q}
+                      </h3>
+                      <p className="text-stone-200 text-base pl-8 leading-relaxed font-sans opacity-95 group-hover:opacity-100 transition-opacity max-w-2xl">{item.a}</p>
+                   </div>
+                ))}
+             </div>
+             <div className="mt-16 text-center">
+                <Link href="/faq" className="text-xs font-bold uppercase tracking-widest text-brass border-b border-brass pb-1 hover:text-white hover:border-white transition-colors">
+                   Read Full FAQ →
+                </Link>
+             </div>
           </div>
 
-          {/* Trust signals */}
-          <div className="border-t border-white/10 pt-8">
-            <div className="flex flex-wrap justify-center gap-x-12 gap-y-4 text-xs font-mono text-white/40 uppercase tracking-wider">
-                 <span className="flex items-center gap-2">
-                    <span className="text-brass text-[8px]">●</span> Fast Turnarounds
-                 </span>
-                 <span className="flex items-center gap-2">
-                    <span className="text-brass text-[8px]">●</span> Local Support
-                 </span>
-                 <span className="flex items-center gap-2">
-                    <span className="text-brass text-[8px]">●</span> Performance-First
-                 </span>
-            </div>
-          </div>
+
+          <PreFooterCta mode="embedded" />
+
         </div>
       </section>
 
     </div>
   );
 }
-

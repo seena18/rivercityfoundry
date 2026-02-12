@@ -1,6 +1,7 @@
 'use client';
 
 import { InlineWidget } from "react-calendly";
+import Link from 'next/link';
 
 export default function Consultation() {
   return (
@@ -19,13 +20,19 @@ export default function Consultation() {
 
       <div className="relative max-w-5xl mx-auto text-center z-10">
         
-        <h2 className="text-3xl font-bold uppercase tracking-tight text-soot mb-4">Book a Session</h2>
+        <h1 className="text-3xl font-bold uppercase tracking-tight text-soot mb-4">Book a 15-min consult</h1>
         
         <p className="text-sm text-[#555] max-w-xl mx-auto mb-8 font-light">
-          Let's discuss your build requirements. No sales scripts—just a feasibility check.
+          Pick a time. Clear scope. Fixed quote.
         </p>
+
+        <div className="flex flex-col items-center gap-4 mb-8">
+          <Link href="/contact" className="text-xs font-bold uppercase tracking-widest text-soot hover:text-brass transition-colors border-b border-soot/30 hover:border-brass pb-1">
+            Prefer email? Send an inquiry →
+          </Link>
+        </div>
         
-        <div className="bg-white border text-center border-rule shadow-[4px_4px_0px_var(--rule)] overflow-hidden min-h-[1050px]">
+        <div id="booking-widget" className="bg-white border text-center border-rule shadow-[4px_4px_0px_var(--rule)] overflow-hidden min-h-[1050px]">
              {/* Book your session below */}
             <InlineWidget 
               url="https://calendly.com/ssabed00/30min" 
@@ -43,6 +50,7 @@ export default function Consultation() {
             />
         </div>
       </div>
+
     </div>
   );
 }

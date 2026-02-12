@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 export default function Contact() {
   return (
     <div className="bg-paper min-h-screen pt-40 pb-24 px-6 font-sans text-soot relative overflow-hidden">
@@ -15,10 +17,15 @@ export default function Contact() {
 
       <div className="relative max-w-xl mx-auto z-10">
         <div className="text-center mb-8">
-          <h2 className="text-3xl font-bold uppercase tracking-tight text-soot mb-4">Start a Build</h2>
+         <h1 className="text-3xl font-bold uppercase tracking-tight text-soot mb-4">Request a consult</h1>
           <p className="text-sm text-[#555] font-light">
-             Tell us about your project requirements. We usually respond within 24 hours.
+           Tell us what you’re trying to build. We’ll reply within 24 hours to schedule the 15-minute call.
           </p>
+          <div className="mt-4">
+            <Link href="/consultation" className="text-xs font-bold uppercase tracking-widest text-soot hover:text-brass transition-colors border-b border-soot/30 hover:border-brass pb-1">
+              Ready to pick a time? Book the 15-min consult →
+            </Link>
+          </div>
           <div className="mt-6 flex flex-col items-center gap-2">
              <span className="text-[10px] font-mono text-brass uppercase tracking-widest">Immediate Inquiry? Start a Call</span>
              <a href="tel:9165420331" className="text-2xl font-bold text-soot hover:text-brass transition-colors border-b-2 border-brass pb-1">
@@ -61,19 +68,20 @@ export default function Contact() {
             </div>
 
             <div>
-              <label htmlFor="message" className="block text-[10px] font-bold text-soot uppercase tracking-widest mb-2 font-mono">Project Scope</label>
+              <label htmlFor="message" className="block text-[10px] font-bold text-soot uppercase tracking-widest mb-2 font-mono">Build Scope</label>
               <textarea id="message" name="message" rows={4} 
                         className="py-3 px-4 block w-full bg-paper border-b border-rule text-soot focus:outline-none focus:border-brass transition-colors placeholder-gray-400"></textarea>
             </div>
 
             <div className="pt-4">
               <button type="submit" className="w-full btn-hardware-primary px-8 py-4 text-xs">
-                Send Request
+                Send an inquiry
               </button>
             </div>
           </form>
         </div>
       </div>
+
     </div>
   );
 }

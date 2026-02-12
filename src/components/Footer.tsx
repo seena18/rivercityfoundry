@@ -33,16 +33,16 @@ export default function Footer() {
             </div>
         </div>
 
-        <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-stone-600 uppercase tracking-widest">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-stone-400 uppercase tracking-widest">
             <div className="flex flex-col md:flex-row gap-4 md:items-center">
                 <div className="flex gap-2 items-center">
                     <span className="text-brass">●</span> SYSTEM_OPERATIONAL
                     <span className="opacity-50 mx-2 hidden md:inline">|</span>
-                    <span className="text-stone-500 normal-case tracking-normal">Accepting new projects</span>
+                  <span className="text-stone-400 normal-case tracking-normal">Accepting new builds</span>
                 </div>
             </div>
             
-            <div className="text-stone-600">
+            <div className="text-stone-400">
                © {new Date().getFullYear()} RIVER CITY FOUNDRY. V2.0.4 [BUILD_8821]
             </div>
         </div>
